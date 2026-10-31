@@ -8,6 +8,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"net/http/pprof"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -62,10 +63,20 @@ func NewApp(cfg *Config) *App {
 func (a *App) Run() error {
 	a.repl.Start()
 	go func() {
-		srv := &http.Server{Addr: ":" + strconv.Itoa(a.cfg.InternalPort), Handler: a.imgs.internalHandler()}
+		mux := http.NewServeMux()
+		mux.Handle("/image/", a.imgs.internalHandler())
+		mux.HandleFunc("/debug/pprof/", pprof.Index)
+		mux.HandleFunc("/debug/pprof/profile", pprof.Profile)
+		mux.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
+		mux.HandleFunc("/debug/pprof/trace", pprof.Trace)
+		srv := &http.Server{Addr: ":" + strconv.Itoa(a.cfg.InternalPort), Handler: mux}
 		log.Println(srv.ListenAndServe())
 	}()
-	srv := &http.Server{Addr: a.cfg.HTTPAddr, Handler: a, ReadHeaderTimeout: 30 * time.Second, IdleTimeout: 300 * time.Second}
+	var handler http.Handler = a
+	if a.cfg.AccessLog != "" {
+		handler = newAccessLogger(a, a.cfg.AccessLog)
+	}
+	srv := &http.Server{Addr: a.cfg.HTTPAddr, Handler: handler, ReadHeaderTimeout: 30 * time.Second, IdleTimeout: 300 * time.Second}
 	return srv.ListenAndServe()
 }
 
