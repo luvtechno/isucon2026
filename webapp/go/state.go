@@ -109,7 +109,6 @@ type User struct {
 	ActivePosts []*Post            // 期間中で削除されていない投稿
 	Session     *UserSession
 	SSE         map[*sseSub]struct{}
-	Reads       readCounters
 }
 
 func (u *User) accountType() string {

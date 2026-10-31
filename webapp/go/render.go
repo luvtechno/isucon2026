@@ -4,7 +4,6 @@ import (
 	"crypto/sha256"
 	"encoding/base64"
 	"encoding/json"
-	"os"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -140,16 +139,11 @@ const minSigExpRemaining = time.Hour
 
 // currentImageExp はいま発行する URL の期限を返す。
 func currentImageExp(now time.Time) int64 {
-	if expOffsetSec != 0 {
-		return now.Unix() + expOffsetSec
-	}
 	if exp := sigExp.Load(); exp-now.Unix() >= int64(minSigExpRemaining/time.Second) {
 		return exp
 	}
 	return now.Add(imageURLLifetime).Unix()
 }
-
-var expOffsetSec, _ = strconv.ParseInt(os.Getenv("ISUREAL_EXP_OFFSET_SEC"), 10, 64)
 
 type renderer struct {
 	b      []byte

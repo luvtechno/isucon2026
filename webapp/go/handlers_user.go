@@ -4,13 +4,10 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"encoding/hex"
-	"fmt"
 	"hash/crc32"
 	"image/jpeg"
 	"io"
-	"log"
 	"net/http"
-	"os"
 	"sort"
 	"strings"
 	"time"
@@ -145,19 +142,9 @@ func (a *App) updateMeHandler(c *echo.Context, s *session) error {
 	return writeJSON(c, http.StatusOK, r.b)
 }
 
-var jpegDebug = os.Getenv("ISUREAL_JPEG_DEBUG") != ""
-
 // JPEG の検査。ヘッダだけを読む。
 func checkJPEG(data []byte, maxDim int) (ok bool, tooLarge bool) {
 	cfg, err := jpeg.DecodeConfig(bytes.NewReader(data))
-	if jpegDebug {
-		_, fullErr := jpeg.Decode(bytes.NewReader(data))
-		if (err == nil) != (fullErr == nil) || err != nil {
-			n := min(len(data), 32)
-			log.Printf("jpeg check: size=%d cfgErr=%v fullErr=%v head=%x tail=%x", len(data), err, fullErr, data[:n], data[len(data)-n:])
-			os.WriteFile(fmt.Sprintf("/tmp/jpeg-%d-%d.bin", len(data), time.Now().UnixNano()), data[:min(len(data), 256<<10)], 0o644)
-		}
-	}
 	if err != nil {
 		return false, false
 	}
@@ -327,9 +314,7 @@ func (a *App) getUserHandler(c *echo.Context, s *session) error {
 		bio = u.Bio
 	}
 	r.user(u, bio)
-	window := st.current[s.user.Region]
 	st.mu.RUnlock()
-	a.throttle.CountRead(s.user, window, readProfile)
 	return writeJSON(c, http.StatusOK, r.b)
 }
 

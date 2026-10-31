@@ -88,7 +88,6 @@ func (a *App) dispatchWindow(w *Window, subs []*sseSub) {
 				time.Sleep(time.Duration(stagger*staggerOrder[w.Region]) * time.Millisecond)
 			}
 		}
-		a.throttle.ResetImageCounts()
 		for _, sub := range subs {
 			select {
 			case sub.ch <- w:
@@ -340,14 +339,7 @@ func writeJSON(c *echo.Context, status int, body []byte) error {
 
 // --- 画像 ---
 
-var noStore = imageCacheControl()
-
-func imageCacheControl() []string {
-	if v := os.Getenv("ISUREAL_IMAGE_CC"); v != "" {
-		return []string{v}
-	}
-	return []string{"no-store"}
-}
+var noStore = []string{"no-store"}
 var imageJPEG = []string{"image/jpeg"}
 
 func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
@@ -464,10 +456,6 @@ func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
 		writeError(w, http.StatusForbidden, "image_forbidden")
 		return
 	}
-	if hist != nil && a.throttle.ShedHistImage() {
-		writeError(w, http.StatusInternalServerError, "image_unavailable")
-		return
-	}
 	h["Content-Type"] = imageJPEG
 	if hist != nil {
 		bp := getBuf()
@@ -484,7 +472,6 @@ func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
 		putBuf(bp)
 		return
 	}
-	a.throttle.CountImage(ip)
 	f, err := a.imgs.Open(id, origin)
 	if err != nil {
 		log.Printf("failed to open image %s: %v", idStr, err)
