@@ -32,7 +32,7 @@ for (;;) {
     console.log('href', top.href);
     break;
   }
-  await page.waitForTimeout(5000);
+  await page.waitForTimeout(1500);
 }
 await closePage(browser, page);
 process.exit(0);

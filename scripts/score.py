@@ -2,7 +2,7 @@
 """アクセスログから、活動ごとの得点をおおまかに見積もる（上限は考慮しない）。usage: score.py <dir>"""
 import sys, glob, re, collections
 d = sys.argv[1]
-mult = {'asia1': 1.0, 'europe1': 1.5, 'america1': 1.5}
+mult = {'asia1': 1.0, 'asia2': 1.0, 'europe1': 1.5, 'america1': 1.5}
 UU = re.compile(r'[0-9a-f]{8}-[0-9a-f-]{27}')
 rules = [
  ('GET /api/feeds/friends', 1), ('GET /api/feeds/public', 1), ('GET /api/feeds/following', 1), ('GET /api/feeds/friends-of-friends', 1),

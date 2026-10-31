@@ -4,7 +4,7 @@ tag=${1:-$(date +%H%M%S)}
 cd "$(dirname "$0")/.."
 scripts/getlogs.sh pre >/dev/null 2>&1
 mkdir -p tmp/prof/$tag
-node scripts/bench.mjs 2>&1 | tail -2 > tmp/bench-$tag.txt &
+node scripts/bench.mjs > tmp/bench-$tag.txt 2>&1 &
 BP=$!
 if [ "$2" != "--no-prof" ]; then
   scripts/probe-router.sh 90 tmp/prof/$tag/probe.txt &

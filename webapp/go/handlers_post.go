@@ -201,8 +201,10 @@ func (a *App) createPostHandler(c *echo.Context, s *session) error {
 	r := newRenderer(a.st, make([]byte, 0, 1024))
 	a.st.mu.RLock()
 	r.post(p)
+	posted := len(p.Window.Posts)
 	a.st.mu.RUnlock()
 	r.raw(`}`)
+	a.throttle.AfterPost(posted)
 	return writeJSON(c, http.StatusCreated, r.b)
 }
 

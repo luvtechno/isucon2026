@@ -23,13 +23,14 @@ import (
 
 // App は1つのノードのアプリケーション。
 type App struct {
-	cfg   *Config
-	pack  *Pack
-	st    *State
-	repl  *Replicator
-	imgs  *ImageStore
-	guard *Guard
-	echo  *echo.Echo
+	cfg      *Config
+	pack     *Pack
+	st       *State
+	repl     *Replicator
+	imgs     *ImageStore
+	guard    *Guard
+	echo     *echo.Echo
+	throttle *Throttle
 
 	publicIndex []byte
 }
@@ -57,6 +58,7 @@ func NewApp(cfg *Config) *App {
 	})
 	a.publicIndex, _ = os.ReadFile(filepath.Join(cfg.PublicDir, "index.html"))
 	a.echo = a.newEcho()
+	a.throttle = NewThrottle()
 	return a
 }
 
@@ -93,6 +95,7 @@ func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			writeError(w, http.StatusRequestEntityTooLarge, "request_entity_too_large")
 			return
 		}
+		a.throttle.Before(r)
 		if r.Method == http.MethodGet && strings.HasPrefix(path, "/api/images/") {
 			a.serveImage(w, r, path[len("/api/images/"):])
 			return
