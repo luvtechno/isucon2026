@@ -2,7 +2,9 @@
 """閲覧役（Memories を繰り返す IP）の数と現れた時刻を出す。usage: viewers.py <dir>"""
 import sys, collections
 d = sys.argv[1]
-for h in ['asia1', 'europe1', 'america1']:
+for h in ['asia1', 'asia2', 'europe1', 'america1']:
+    import os
+    if not os.path.exists(f'{d}/{h}.ltsv'): continue
     first = {}; t0 = None; feeds = collections.Counter(); login = collections.Counter(); posts = collections.Counter()
     for line in open(f'{d}/{h}.ltsv', errors='replace'):
         r = dict(p.split(':', 1) for p in line.rstrip('\n').split('\t') if ':' in p)

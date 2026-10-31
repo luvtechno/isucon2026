@@ -1068,6 +1068,10 @@ func (a *App) listMemories(c *echo.Context, s *session, start, end int32) error 
 
 // --- エクスポート ---
 
+const exportBulkMax = 32 << 20
+
+var exportBulkPool = sync.Pool{New: func() any { b := make([]byte, 0, 8<<20); return &b }}
+
 type exportEntry struct {
 	hist   *HistImage
 	id     ID
@@ -1136,6 +1140,28 @@ func (a *App) exportPostsHandler(c *echo.Context, s *session) error {
 	var body bytes.Buffer
 	body.Grow(total + len(r.b) + 1024)
 	writer := zip.NewWriter(&body)
+	// 過去の画像は持ち主ごとに固めてファイルに置いてあるので、まとめて1回で読む
+	var lo, hi uint64
+	lo = ^uint64(0)
+	for i := range entries {
+		if e := entries[i].hist; e != nil && e.Len > 0 {
+			lo = min(lo, e.Off)
+			hi = max(hi, e.Off+uint64(e.Len))
+		}
+	}
+	var bulk []byte
+	var bulkBuf *[]byte
+	if hi > lo && hi-lo <= exportBulkMax && hi <= a.pack.imageFileSz {
+		bulkBuf = exportBulkPool.Get().(*[]byte)
+		defer exportBulkPool.Put(bulkBuf)
+		if uint64(cap(*bulkBuf)) < hi-lo {
+			*bulkBuf = make([]byte, hi-lo)
+		}
+		bulk = (*bulkBuf)[:hi-lo]
+		if _, err := a.pack.imageFile.ReadAt(bulk, int64(lo)); err != nil {
+			bulk = nil
+		}
+	}
 	var imgBuf []byte
 	for i := range entries {
 		e := &entries[i]
@@ -1148,6 +1174,12 @@ func (a *App) exportPostsHandler(c *echo.Context, s *session) error {
 			return err
 		}
 		if e.hist != nil {
+			if bulk != nil {
+				if _, err := w.Write(bulk[e.hist.Off-lo : e.hist.Off-lo+uint64(e.hist.Len)]); err != nil {
+					return err
+				}
+				continue
+			}
 			imgBuf, err = a.imgs.ReadHist(e.hist, imgBuf[:0])
 			if err != nil {
 				return err
