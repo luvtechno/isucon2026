@@ -188,8 +188,22 @@ func (r *Replicator) Start() {
 		go r.listen()
 		return
 	}
+	// 世代はディスクに残す。再起動のあとに初期化と取り違えて、手元の画像を消さないようにする。
+	if raw, err := os.ReadFile(r.epochPath()); err == nil {
+		if v, err := strconv.ParseUint(strings.TrimSpace(string(raw)), 10, 64); err == nil {
+			r.epoch.Store(v)
+		}
+	}
 	go r.replicaLoop()
 	go r.replicaSender()
+}
+
+func (r *Replicator) epochPath() string { return filepath.Join(r.dataDir, "epoch") }
+
+func (r *Replicator) saveEpoch(epoch uint64) {
+	if err := os.WriteFile(r.epochPath(), []byte(strconv.FormatUint(epoch, 10)), 0o644); err != nil {
+		log.Printf("failed to save epoch: %v", err)
+	}
 }
 
 // --- central ---
@@ -596,6 +610,7 @@ func (r *Replicator) replicaSession() error {
 			r.app.imgs.Reset()
 			r.app.guard.Reset()
 			r.epoch.Store(epoch)
+			r.saveEpoch(epoch)
 			r.applied.Store(0)
 			r.durable.Store(0)
 			r.queueFrame(frameOf(frameResetAck, le64(epoch)))

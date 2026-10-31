@@ -22,6 +22,9 @@ type Throttle struct {
 	// 投稿期間あたりの投稿が postSoftCap を超えたら、それ以降の投稿の応答を postDelay だけ遅らせる。
 	postSoftCap int
 	postDelay   time.Duration
+
+	// 毎秒の要求数が exportShedRPS を超えているあいだは、エクスポートを断る。
+	exportShedRPS int64
 }
 
 func NewThrottle() *Throttle {
@@ -41,6 +44,7 @@ func NewThrottle() *Throttle {
 	t.postSoftCap, _ = strconv.Atoi(os.Getenv("ISUREAL_POST_SOFTCAP"))
 	ms, _ := strconv.Atoi(os.Getenv("ISUREAL_POST_SOFTCAP_DELAY_MS"))
 	t.postDelay = time.Duration(ms) * time.Millisecond
+	t.exportShedRPS, _ = strconv.ParseInt(os.Getenv("ISUREAL_EXPORT_SHED_RPS"), 10, 64)
 	go func() {
 		for range time.Tick(time.Second) {
 			t.rps.Store(t.count.Swap(0))
@@ -71,6 +75,10 @@ func classifyRequest(r *http.Request) string {
 		return "post"
 	}
 	return "other"
+}
+
+func (t *Throttle) ShedExport() bool {
+	return t.exportShedRPS > 0 && t.rps.Load() >= t.exportShedRPS
 }
 
 func (t *Throttle) AfterPost(posted int) {

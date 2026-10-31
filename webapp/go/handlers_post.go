@@ -1081,6 +1081,9 @@ type exportEntry struct {
 }
 
 func (a *App) exportPostsHandler(c *echo.Context, s *session) error {
+	if a.throttle.ShedExport() {
+		return NewAPIError(http.StatusInternalServerError, "export_unavailable")
+	}
 	st := a.st
 	u := s.user
 	entries := make([]exportEntry, 0, 64)
