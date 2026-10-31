@@ -705,11 +705,12 @@ func (s *State) applyOpenWindow(c *Cmd, ts int64) (any, error) {
 	s.windows[w.ID] = w
 	s.current[w.Region] = w
 	s.maxDate[w.Region] = c.Date
-	for sub := range s.sseByRegion[w.Region] {
-		select {
-		case sub.ch <- w:
-		default:
+	if subs := s.sseByRegion[w.Region]; len(subs) > 0 && s.onWindowOpen != nil {
+		list := make([]*sseSub, 0, len(subs))
+		for sub := range subs {
+			list = append(list, sub)
 		}
+		s.onWindowOpen(w, list)
 	}
 	return w, nil
 }

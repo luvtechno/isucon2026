@@ -327,7 +327,9 @@ func (a *App) getUserHandler(c *echo.Context, s *session) error {
 		bio = u.Bio
 	}
 	r.user(u, bio)
+	window := st.current[s.user.Region]
 	st.mu.RUnlock()
+	a.throttle.CountRead(s.user, window, readProfile)
 	return writeJSON(c, http.StatusOK, r.b)
 }
 

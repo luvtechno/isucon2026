@@ -109,6 +109,7 @@ type User struct {
 	ActivePosts []*Post            // 期間中で削除されていない投稿
 	Session     *UserSession
 	SSE         map[*sseSub]struct{}
+	Reads       readCounters
 }
 
 func (u *User) accountType() string {
@@ -253,6 +254,8 @@ type State struct {
 	lastTs      int64
 
 	bans atomic.Pointer[map[string]int64]
+
+	onWindowOpen func(w *Window, subs []*sseSub)
 }
 
 func NewState(pack *Pack) *State {

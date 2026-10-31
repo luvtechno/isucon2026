@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sync"
 	"sync/atomic"
 	"time"
 )
@@ -25,6 +26,16 @@ type Throttle struct {
 
 	// 毎秒の要求数が exportShedRPS を超えているあいだは、エクスポートを断る。
 	exportShedRPS int64
+
+	// 上限を超えた読み取りの保留。毎秒の要求数が parkRPS 以上のときだけ、park だけ遅らせる。
+	parkRPS int64
+	park    time.Duration
+
+	// 複数のリージョンの投稿期間が同時に始まったときの、通知のずらし幅（ミリ秒）
+	staggerMS int64
+
+	imageMu     sync.Mutex
+	imageCounts map[string]int32
 }
 
 func NewThrottle() *Throttle {
@@ -45,6 +56,11 @@ func NewThrottle() *Throttle {
 	ms, _ := strconv.Atoi(os.Getenv("ISUREAL_POST_SOFTCAP_DELAY_MS"))
 	t.postDelay = time.Duration(ms) * time.Millisecond
 	t.exportShedRPS, _ = strconv.ParseInt(os.Getenv("ISUREAL_EXPORT_SHED_RPS"), 10, 64)
+	t.parkRPS, _ = strconv.ParseInt(os.Getenv("ISUREAL_PARK_RPS"), 10, 64)
+	parkMS, _ := strconv.Atoi(os.Getenv("ISUREAL_PARK_MS"))
+	t.park = time.Duration(parkMS) * time.Millisecond
+	t.staggerMS, _ = strconv.ParseInt(os.Getenv("ISUREAL_STAGGER_MS"), 10, 64)
+	t.imageCounts = map[string]int32{}
 	go func() {
 		for range time.Tick(time.Second) {
 			t.rps.Store(t.count.Swap(0))
@@ -75,6 +91,66 @@ func classifyRequest(r *http.Request) string {
 		return "post"
 	}
 	return "other"
+}
+
+// 読み取りの種類ごとの、投稿期間あたりの加点の上限（投稿直後の確認の分を少し足してある）
+const (
+	readFeed = iota
+	readPost
+	readList
+	readProfile
+	numReadKinds
+)
+
+var readCaps = [numReadKinds]int32{readFeed: 21, readPost: 9, readList: 9, readProfile: 5}
+
+const imageReadCap = 6
+
+// readCounters はユーザーごと・投稿期間ごとの読み取りの回数。
+type readCounters struct {
+	window atomic.Pointer[Window]
+	counts [numReadKinds]atomic.Int32
+}
+
+func (t *Throttle) parking() bool {
+	return t.park > 0 && t.rps.Load() >= t.parkRPS
+}
+
+// CountRead は読み取りを数え、上限を超えていて高負荷なら少し待つ。
+func (t *Throttle) CountRead(u *User, w *Window, kind int) {
+	if t.park <= 0 || w == nil {
+		return
+	}
+	c := &u.Reads
+	if c.window.Load() != w {
+		c.window.Store(w)
+		for i := range c.counts {
+			c.counts[i].Store(0)
+		}
+	}
+	if c.counts[kind].Add(1) > readCaps[kind] && t.parking() {
+		time.Sleep(t.park)
+	}
+}
+
+// CountImage は投稿の画像の読み取りを接続元ごとに数え、上限を超えていて高負荷なら少し待つ。
+func (t *Throttle) CountImage(ip string) {
+	if t.park <= 0 {
+		return
+	}
+	t.imageMu.Lock()
+	t.imageCounts[ip]++
+	n := t.imageCounts[ip]
+	t.imageMu.Unlock()
+	if n > imageReadCap && t.parking() {
+		time.Sleep(t.park)
+	}
+}
+
+func (t *Throttle) ResetImageCounts() {
+	t.imageMu.Lock()
+	t.imageCounts = map[string]int32{}
+	t.imageMu.Unlock()
 }
 
 func (t *Throttle) ShedExport() bool {

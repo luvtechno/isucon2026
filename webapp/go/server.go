@@ -59,7 +59,43 @@ func NewApp(cfg *Config) *App {
 	a.publicIndex, _ = os.ReadFile(filepath.Join(cfg.PublicDir, "index.html"))
 	a.echo = a.newEcho()
 	a.throttle = NewThrottle()
+	a.st.onWindowOpen = a.dispatchWindow
 	return a
+}
+
+// staggerOrder は同時に始まった投稿期間の通知の順番。倍率の高いリージョンを先にする。
+var staggerOrder = map[string]int64{"europe": 0, "america": 1, "asia": 2}
+
+// dispatchWindow は投稿期間の開始を SSE の接続へ配る。
+// 複数のリージョンの投稿期間が同時に始まったら、投稿が一度に集中しないように、リージョンごとに通知をずらす。
+func (a *App) dispatchWindow(w *Window, subs []*sseSub) {
+	go func() {
+		stagger := a.throttle.staggerMS
+		if stagger > 0 {
+			time.Sleep(150 * time.Millisecond)
+			st := a.st
+			st.mu.RLock()
+			together := false
+			for region, other := range st.current {
+				if region != w.Region && !other.Ended {
+					if d := other.StartsAt - w.StartsAt; d > -1500_000 && d < 1500_000 {
+						together = true
+					}
+				}
+			}
+			st.mu.RUnlock()
+			if together {
+				time.Sleep(time.Duration(stagger*staggerOrder[w.Region]) * time.Millisecond)
+			}
+		}
+		a.throttle.ResetImageCounts()
+		for _, sub := range subs {
+			select {
+			case sub.ch <- w:
+			default:
+			}
+		}
+	}()
 }
 
 func (a *App) Run() error {
@@ -428,6 +464,7 @@ func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
 		putBuf(bp)
 		return
 	}
+	a.throttle.CountImage(ip)
 	f, err := a.imgs.Open(id, origin)
 	if err != nil {
 		log.Printf("failed to open image %s: %v", idStr, err)

@@ -253,10 +253,12 @@ func (a *App) getPostHandler(c *echo.Context, s *session) error {
 		r.raw(`}`)
 		found = true
 	}
+	window := st.current[s.user.Region]
 	st.mu.RUnlock()
 	if !found {
 		return NewAPIError(http.StatusNotFound, "post_not_found")
 	}
+	a.throttle.CountRead(s.user, window, readPost)
 	return writeJSON(c, http.StatusOK, r.b)
 }
 
@@ -467,11 +469,13 @@ func (a *App) getFeedHandler(c *echo.Context, s *session) error {
 			a.feedFoF(viewer, cur, emit)
 		}
 	}
+	window := st.current[viewer.Region]
 	st.mu.RUnlock()
 	r.raw(`],"hasMore":`)
 	r.raw(boolStr(hasMore))
 	r.raw(`}`)
 	*bp = r.b
+	a.throttle.CountRead(viewer, window, readFeed)
 	return writeJSON(c, http.StatusOK, r.b)
 }
 
@@ -686,11 +690,13 @@ func (a *App) getCommentsHandler(c *echo.Context, s *session) error {
 		r.comment(cm.ID, cm.Author, cm.Body, cm.CreatedAt)
 		count++
 	}
+	window := st.current[s.user.Region]
 	unlock()
 	r.raw(`],"hasMore":`)
 	r.raw(boolStr(hasMore))
 	r.raw(`}`)
 	*bp = r.b
+	a.throttle.CountRead(s.user, window, readList)
 	return writeJSON(c, http.StatusOK, r.b)
 }
 
@@ -836,11 +842,13 @@ func (a *App) getRealMojisHandler(c *echo.Context, s *session) error {
 			count++
 		}
 	}
+	window := st.current[s.user.Region]
 	unlock()
 	r.raw(`],"hasMore":`)
 	r.raw(boolStr(hasMore))
 	r.raw(`}`)
 	*bp = r.b
+	a.throttle.CountRead(s.user, window, readList)
 	return writeJSON(c, http.StatusOK, r.b)
 }
 
