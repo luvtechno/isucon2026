@@ -340,7 +340,14 @@ func writeJSON(c *echo.Context, status int, body []byte) error {
 
 // --- 画像 ---
 
-var noStore = []string{"no-store"}
+var noStore = imageCacheControl()
+
+func imageCacheControl() []string {
+	if v := os.Getenv("ISUREAL_IMAGE_CC"); v != "" {
+		return []string{v}
+	}
+	return []string{"no-store"}
+}
 var imageJPEG = []string{"image/jpeg"}
 
 func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
