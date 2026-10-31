@@ -202,7 +202,7 @@ type session struct {
 
 type authedHandler func(c *echo.Context, s *session) error
 
-const unknownTokenGrace = 150 * time.Millisecond
+const unknownTokenGrace = 500 * time.Millisecond
 
 // auth は SessionMiddleware と RegionMiddleware に当たる。
 func (a *App) auth(regionCheck bool, next authedHandler) echo.HandlerFunc {
@@ -222,7 +222,7 @@ func (a *App) auth(regionCheck bool, next authedHandler) echo.HandlerFunc {
 			region, active = u.Region, u.Active
 		}
 		st.mu.RUnlock()
-		if u == nil && !a.repl.isCentral {
+		if u == nil {
 			// 別のノードでログインした直後のトークンは、まだ届いていないことがある
 			deadline := time.Now().Add(unknownTokenGrace)
 			for u == nil && time.Now().Before(deadline) {
@@ -259,7 +259,7 @@ func (a *App) adminAuth(next func(c *echo.Context, hash [32]byte) error) echo.Ha
 			return st.adminSessions[hash] != nil
 		}
 		ok := find()
-		if !ok && !a.repl.isCentral {
+		if !ok {
 			deadline := time.Now().Add(unknownTokenGrace)
 			for !ok && time.Now().Before(deadline) {
 				time.Sleep(5 * time.Millisecond)
@@ -331,32 +331,34 @@ func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
 		return
 	}
 
-	st := a.st
 	var hist *HistImage
 	var key, known [32]byte
 	var knownExp int64
 	var valid, found bool
 	var origin uint8
 	var length uint32
-	st.mu.RLock()
-	if live := st.images[id]; live != nil {
-		if live.Owner.Active {
-			found = true
-			key = live.Owner.Key
-			known, knownExp = live.Sig, live.SigExp
-			origin, length = live.Origin, live.Len
-			switch live.Kind {
-			case ImageKindProfile:
-				valid = live.Owner.HasProfile && live.Owner.ProfileImg == id
-			case ImageKindPost:
-				valid = !live.Post.Deleted
-			case ImageKindRealmoji:
-				rm := live.RM
-				valid = !rm.Replaced && !rm.Deleted && !rm.Post.Deleted && rm.Post.Author.Active
+	lookup := func() {
+		st := a.st
+		st.mu.RLock()
+		if live := st.images[id]; live != nil {
+			if live.Owner.Active {
+				found = true
+				key = live.Owner.Key
+				known, knownExp = live.Sig, live.SigExp
+				origin, length = live.Origin, live.Len
+				switch live.Kind {
+				case ImageKindProfile:
+					valid = live.Owner.HasProfile && live.Owner.ProfileImg == id
+				case ImageKindPost:
+					valid = !live.Post.Deleted
+				case ImageKindRealmoji:
+					rm := live.RM
+					valid = !rm.Replaced && !rm.Deleted && !rm.Post.Deleted && rm.Post.Author.Active
+				}
 			}
+			st.mu.RUnlock()
+			return
 		}
-		st.mu.RUnlock()
-	} else {
 		st.mu.RUnlock()
 		hist = a.pack.FindImage(id)
 		if hist != nil {
@@ -383,6 +385,13 @@ func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
 			}
 			st.mu.RUnlock()
 		}
+	}
+	lookup()
+	if !found || !valid {
+		// 手元の複製が遅れていると、作られたばかりの画像が見えない。追いついてから引き直す。
+		a.repl.WaitFresh()
+		found, valid, hist = false, false, nil
+		lookup()
 	}
 	if !found {
 		writeError(w, http.StatusForbidden, "image_forbidden")
