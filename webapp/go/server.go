@@ -2,6 +2,7 @@ package isureal
 
 import (
 	"os"
+	"time"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/labstack/echo/v5"
@@ -11,9 +12,10 @@ import (
 )
 
 type HandlerContext struct {
-	DB     *sqlx.DB
-	Config *Config
-	IPBans *IPBanList
+	DB      *sqlx.DB
+	Config  *Config
+	IPBans  *IPBanList
+	Windows *windowWatcher
 }
 
 func NewServer(config *Config) *echo.Echo {
@@ -31,16 +33,20 @@ func NewServer(config *Config) *echo.Echo {
 	if err != nil {
 		panic("failed to open database: " + err.Error())
 	}
-	db.SetMaxOpenConns(30)
-	err = db.Ping()
-	if err != nil {
-		panic("failed to ping database: " + err.Error())
+	db.SetMaxOpenConns(60)
+	db.SetMaxIdleConns(60)
+	db.SetConnMaxIdleTime(0)
+	db.SetConnMaxLifetime(0)
+	for err = db.Ping(); err != nil; err = db.Ping() {
+		// 再起動の順序は決まっていないので、DB が上がるまで待つ
+		time.Sleep(time.Second)
 	}
 
 	handlerContext := &HandlerContext{
-		DB:     db,
-		Config: config,
-		IPBans: &IPBanList{},
+		DB:      db,
+		Config:  config,
+		IPBans:  &IPBanList{},
+		Windows: newWindowWatcher(db, config.Region),
 	}
 	e.Use(IPBanMiddleware(handlerContext))
 

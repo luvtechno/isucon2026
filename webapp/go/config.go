@@ -30,10 +30,11 @@ func ConfigFromEnv() *Config {
 
 func (c *Config) DatabaseDSN() string {
 	u := url.URL{
-		Scheme: "postgres",
-		User:   url.UserPassword(c.DBUser, c.DBPassword),
-		Host:   net.JoinHostPort(c.DBHost, c.DBPort),
-		Path:   "/" + c.DBName,
+		Scheme:   "postgres",
+		User:     url.UserPassword(c.DBUser, c.DBPassword),
+		Host:     net.JoinHostPort(c.DBHost, c.DBPort),
+		Path:     "/" + c.DBName,
+		RawQuery: "sslmode=disable&default_query_exec_mode=exec",
 	}
 	return u.String()
 }

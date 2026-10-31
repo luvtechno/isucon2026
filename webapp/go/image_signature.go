@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"net/url"
 	"strconv"
+	"sync"
 	"time"
 )
 
@@ -22,21 +23,45 @@ func imageSigningKey(secretKeyHash string) ([]byte, error) {
 	return key, nil
 }
 
-func imageSignature(key []byte, imageID string, exp int64) []byte {
-	value := []byte(strconv.FormatInt(exp, 10) + ":" + imageID)
-	for range imageSignatureIterations {
-		mac := hmac.New(sha256.New, key)
+func computeImageSignature(key []byte, imageID string, exp int64) []byte {
+	mac := hmac.New(sha256.New, key)
+	value := make([]byte, 0, sha256.Size)
+	mac.Write([]byte(strconv.FormatInt(exp, 10) + ":" + imageID))
+	value = mac.Sum(value)
+	for range imageSignatureIterations - 1 {
+		mac.Reset()
 		mac.Write(value)
-		value = mac.Sum(nil)
+		value = mac.Sum(value[:0])
 	}
+	return value
+}
+
+// 署名は (鍵, 画像, 期限) だけで決まるので覚えておく。期限を丸めるので、同じ画像の署名は丸めの幅のあいだ同じになる。
+const imageExpGranularity = 60
+
+type imageSigCacheKey struct {
+	imageID string
+	exp     int64
+	key     string
+}
+
+var imageSigCache sync.Map // imageSigCacheKey -> []byte
+
+func imageSignature(key []byte, imageID string, exp int64) []byte {
+	cacheKey := imageSigCacheKey{imageID: imageID, exp: exp, key: string(key)}
+	if cached, ok := imageSigCache.Load(cacheKey); ok {
+		return cached.([]byte)
+	}
+	value := computeImageSignature(key, imageID, exp)
+	imageSigCache.Store(cacheKey, value)
 	return value
 }
 
 func signedImageURL(user User, imageID string) string {
 	exp := time.Now().Add(imageURLLifetime).Unix()
-	query := url.Values{
-		"exp": {strconv.FormatInt(exp, 10)},
-		"sig": {base64.RawURLEncoding.EncodeToString(imageSignature(user.ImageKey, imageID, exp))},
+	if rem := exp % imageExpGranularity; rem != 0 {
+		exp += imageExpGranularity - rem
 	}
-	return "/api/images/" + url.PathEscape(imageID) + "?" + query.Encode()
+	sig := base64.RawURLEncoding.EncodeToString(imageSignature(user.ImageKey, imageID, exp))
+	return "/api/images/" + url.PathEscape(imageID) + "?exp=" + strconv.FormatInt(exp, 10) + "&sig=" + sig
 }
