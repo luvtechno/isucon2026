@@ -7,19 +7,8 @@ import (
 	"github.com/labstack/echo/v5"
 )
 
-type APIError struct {
-	Status int
-	Code   string
-}
-
 type APIErrorResponse struct {
 	Error string `json:"error"`
-}
-
-func (e *APIError) Error() string { return e.Code }
-
-func NewAPIError(status int, code string) error {
-	return &APIError{Status: status, Code: code}
 }
 
 func APIErrorHandler(c *echo.Context, err error) {
@@ -38,9 +27,7 @@ func APIErrorHandler(c *echo.Context, err error) {
 	if status >= http.StatusInternalServerError {
 		c.Logger().Error("request failed", "error", err)
 	}
-	body := APIErrorResponse{
-		Error: message,
-	}
+	body := APIErrorResponse{Error: message}
 	if writeErr := c.JSON(status, body); writeErr != nil {
 		c.Logger().Error("failed to write error response", "error", writeErr)
 	}
