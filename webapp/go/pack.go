@@ -4,11 +4,13 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"sort"
 	"strconv"
 	"syscall"
+	"time"
 	"unsafe"
 )
 
@@ -132,6 +134,50 @@ func OpenPack(dir string) (*Pack, error) {
 	}
 	p.imageFileSz = uint64(st.Size())
 	return p, nil
+}
+
+// Warm は過去データの索引と、先頭部分の画像をページキャッシュへ読む。
+// 再起動の直後はキャッシュが空なので、最初の走行が遅くならないように前もって読んでおく。
+func (p *Pack) Warm(dir string) {
+	start := time.Now()
+	buf := make([]byte, 1<<20)
+	entries, err := os.ReadDir(dir)
+	if err != nil {
+		return
+	}
+	var total int64
+	for _, e := range entries {
+		if e.Name() == "images.dat" {
+			continue
+		}
+		f, err := os.Open(filepath.Join(dir, e.Name()))
+		if err != nil {
+			continue
+		}
+		for {
+			n, err := f.Read(buf)
+			total += int64(n)
+			if err != nil {
+				break
+			}
+		}
+		f.Close()
+	}
+	remain := int64(p.Init.PrefixLen)
+	if remain > int64(p.imageFileSz) {
+		remain = int64(p.imageFileSz)
+	}
+	var off int64
+	for remain > 0 {
+		n, err := p.imageFile.ReadAt(buf[:min(remain, int64(len(buf)))], off)
+		off += int64(n)
+		remain -= int64(n)
+		total += int64(n)
+		if err != nil {
+			break
+		}
+	}
+	log.Printf("warmed pack: %d bytes in %s", total, time.Since(start))
 }
 
 func (p *Pack) str(off uint32, n uint16) string {

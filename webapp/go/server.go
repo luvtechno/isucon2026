@@ -99,6 +99,7 @@ func (a *App) dispatchWindow(w *Window, subs []*sseSub) {
 }
 
 func (a *App) Run() error {
+	go a.pack.Warm(a.cfg.PackDir)
 	a.repl.Start()
 	go func() {
 		mux := http.NewServeMux()
