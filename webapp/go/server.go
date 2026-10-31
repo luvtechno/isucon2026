@@ -125,8 +125,16 @@ func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	if strings.HasPrefix(path, "/api/") {
 		if !a.repl.ready.Load() {
-			writeError(w, http.StatusServiceUnavailable, "service_unavailable")
-			return
+			// 起動して複製が追いつくまでは受けられない。初期化だけは、追いつくのを待ってから受ける。
+			if path == "/api/initialize" {
+				for i := 0; i < 600 && !a.repl.ready.Load(); i++ {
+					time.Sleep(100 * time.Millisecond)
+				}
+			}
+			if !a.repl.ready.Load() {
+				writeError(w, http.StatusServiceUnavailable, "service_unavailable")
+				return
+			}
 		}
 		if r.ContentLength > maxBodyBytes {
 			writeError(w, http.StatusRequestEntityTooLarge, "request_entity_too_large")

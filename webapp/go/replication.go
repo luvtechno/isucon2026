@@ -152,6 +152,7 @@ func (p *peer) writer() {
 		}
 		out, p.buf = p.buf, out[:0]
 		p.mu.Unlock()
+		p.conn.SetWriteDeadline(time.Now().Add(30 * time.Second))
 		if _, err := p.conn.Write(out); err != nil {
 			p.close()
 			return
@@ -200,7 +201,12 @@ func (r *Replicator) Start() {
 	go r.replicaSender()
 	go func() {
 		for range time.Tick(500 * time.Millisecond) {
-			r.queueFrame(frameOf(frameLoad, le64(uint64(r.app.throttle.rps.Load()))))
+			r.connMu.Lock()
+			connected := r.conn != nil
+			r.connMu.Unlock()
+			if connected {
+				r.queueFrame(frameOf(frameLoad, le64(uint64(r.app.throttle.rps.Load()))))
+			}
 		}
 	}()
 }
@@ -434,6 +440,7 @@ func (r *Replicator) servePeer(conn net.Conn) {
 	}()
 
 	for {
+		conn.SetReadDeadline(time.Now().Add(5 * time.Second))
 		typ, body, err := readFrame(br)
 		if err != nil {
 			return
@@ -586,6 +593,8 @@ func (r *Replicator) replicaSession() error {
 
 	br := bufio.NewReaderSize(conn, 1<<20)
 	for {
+		// tick が 3ms ごとに届くので、しばらく何も届かなければ経路が切れている。繋ぎ直す。
+		conn.SetReadDeadline(time.Now().Add(3 * time.Second))
 		typ, body, err := readFrame(br)
 		if err != nil {
 			return err
