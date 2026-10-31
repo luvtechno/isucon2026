@@ -58,7 +58,7 @@ func NewApp(cfg *Config) *App {
 	})
 	a.publicIndex, _ = os.ReadFile(filepath.Join(cfg.PublicDir, "index.html"))
 	a.echo = a.newEcho()
-	a.throttle = NewThrottle()
+	a.throttle = NewThrottle(cfg.Region)
 	a.st.onWindowOpen = a.dispatchWindow
 	return a
 }
@@ -455,6 +455,10 @@ func (a *App) serveImage(w http.ResponseWriter, r *http.Request, idStr string) {
 	}
 	if !valid {
 		writeError(w, http.StatusForbidden, "image_forbidden")
+		return
+	}
+	if hist != nil && a.throttle.ShedHistImage() {
+		writeError(w, http.StatusInternalServerError, "image_unavailable")
 		return
 	}
 	h["Content-Type"] = imageJPEG

@@ -1,6 +1,7 @@
 package isureal
 
 import (
+	"math/rand/v2"
 	"net/http"
 	"os"
 	"strconv"
@@ -39,10 +40,29 @@ type Throttle struct {
 
 	// 全ノード合計の毎秒の要求数（順序付け役が集計して配る）
 	global atomic.Int64
+
+	// 全体の毎秒の要求数が histImageShedRPS 以上のあいだは、過去の画像を断る（誰からの要求かは区別しない）
+	histImageShedRPS int64
+	histImageShedPct int
+
+	// 閉ループの保留: 全体の毎秒の要求数が clTarget に近いあいだ、asia の Memories を
+	// トークンの数だけ返す。トークンの数は目標との差から毎 100ms 決める。
+	clTarget int64
+	clTokens chan struct{}
+	clWait   time.Duration
 }
 
-func NewThrottle() *Throttle {
+func NewThrottle(region string) *Throttle {
 	t := &Throttle{delays: map[string]time.Duration{}}
+	if region == "asia" {
+		t.clTarget, _ = strconv.ParseInt(os.Getenv("ISUREAL_CLOSED_LOOP_TARGET"), 10, 64)
+		waitMS, _ := strconv.Atoi(os.Getenv("ISUREAL_CLOSED_LOOP_WAIT_MS"))
+		t.clWait = time.Duration(waitMS) * time.Millisecond
+		if t.clTarget > 0 {
+			t.clTokens = make(chan struct{}, 64)
+			go t.closedLoop()
+		}
+	}
 	spec := os.Getenv("ISUREAL_DELAY_SPEC")
 	for _, item := range strings.Split(spec, ",") {
 		k, v, ok := strings.Cut(strings.TrimSpace(item), "=")
@@ -59,6 +79,8 @@ func NewThrottle() *Throttle {
 	ms, _ := strconv.Atoi(os.Getenv("ISUREAL_POST_SOFTCAP_DELAY_MS"))
 	t.postDelay = time.Duration(ms) * time.Millisecond
 	t.exportShedRPS, _ = strconv.ParseInt(os.Getenv("ISUREAL_EXPORT_SHED_RPS"), 10, 64)
+	t.histImageShedRPS, _ = strconv.ParseInt(os.Getenv("ISUREAL_HISTIMAGE_SHED_RPS"), 10, 64)
+	t.histImageShedPct, _ = strconv.Atoi(os.Getenv("ISUREAL_HISTIMAGE_SHED_PCT"))
 	t.parkRPS, _ = strconv.ParseInt(os.Getenv("ISUREAL_PARK_RPS"), 10, 64)
 	parkMS, _ := strconv.Atoi(os.Getenv("ISUREAL_PARK_MS"))
 	t.park = time.Duration(parkMS) * time.Millisecond
@@ -77,9 +99,19 @@ func classifyRequest(r *http.Request) string {
 	p := r.URL.Path
 	switch {
 	case strings.HasPrefix(p, "/api/images/"):
+		// 発行から時間がたった短い期限の URL と、ふつうの URL を分ける
+		if q := r.URL.RawQuery; strings.HasPrefix(q, "exp=") {
+			if i := strings.IndexByte(q, '&'); i > 4 {
+				if exp, err := strconv.ParseInt(q[4:i], 10, 64); err == nil && exp-time.Now().Unix() <= 2*3600 {
+					return "histimg"
+				}
+			}
+		}
 		return "image"
-	case strings.HasPrefix(p, "/api/memories"):
-		return "memories"
+	case p == "/api/memories":
+		return "month"
+	case strings.HasPrefix(p, "/api/memories/"):
+		return "date"
 	case p == "/api/auth/login":
 		return "login"
 	case p == "/api/auth/logout":
@@ -156,6 +188,10 @@ func (t *Throttle) ResetImageCounts() {
 	t.imageMu.Unlock()
 }
 
+func (t *Throttle) ShedHistImage() bool {
+	return t.histImageShedRPS > 0 && t.global.Load() >= t.histImageShedRPS && rand.IntN(100) < t.histImageShedPct
+}
+
 func (t *Throttle) ShedExport() bool {
 	return t.exportShedRPS > 0 && t.rps.Load() >= t.exportShedRPS
 }
@@ -166,12 +202,48 @@ func (t *Throttle) AfterPost(posted int) {
 	}
 }
 
+// closedLoop は全体の要求数と目標の差から、Memories を返す速さを決める。
+// Memories を1つ返すと、そのあと約6要求が続く。
+func (t *Throttle) closedLoop() {
+	rate := 300.0
+	for range time.Tick(100 * time.Millisecond) {
+		rate += float64(t.clTarget-t.global.Load()) / 6 * 0.1 * 0.5
+		rate = max(10, min(rate, 500))
+		n := int(rate/10) + 1
+		for range n {
+			select {
+			case t.clTokens <- struct{}{}:
+			default:
+			}
+		}
+	}
+}
+
+func (t *Throttle) closedLoopWait() {
+	if t.global.Load() < t.clTarget*85/100 {
+		return
+	}
+	select {
+	case <-t.clTokens:
+	case <-time.After(t.clWait):
+	}
+}
+
 func (t *Throttle) Before(r *http.Request) {
 	t.count.Add(1)
+	if t.clTarget > 0 {
+		if p := r.URL.Path; strings.HasPrefix(p, "/api/memories") {
+			t.closedLoopWait()
+		}
+	}
 	if !t.enabled || t.global.Load() < t.minRPS {
 		return
 	}
-	d, ok := t.delays[classifyRequest(r)]
+	class := classifyRequest(r)
+	d, ok := t.delays[class]
+	if !ok && (class == "month" || class == "date") {
+		d, ok = t.delays["memories"]
+	}
 	if !ok {
 		d, ok = t.delays["all"]
 	}
