@@ -22,3 +22,7 @@ PGPASSWORD="$ISUREAL_DB_PASSWORD" psql \
 	--dbname="$ISUREAL_DB_NAME" \
 	--set=ON_ERROR_STOP=1 \
 	--file=reset.sql
+
+# アプリの状態は DB ではなくメモリと順序付け役のログにあるので、アプリも初期化する
+curl -fsS --max-time 60 -X POST "http://127.0.0.1:${ISUREAL_HTTP_PORT:-80}/api/initialize" >/dev/null || \
+	curl -fsS --max-time 60 -X POST "http://127.0.0.1:8080/api/initialize" >/dev/null || true

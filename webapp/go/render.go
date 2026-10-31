@@ -136,7 +136,7 @@ func cachedSignature(key *[32]byte, imageID ID, exp int64) [32]byte {
 // 期限が近づいたら、その時点から24時間後へ切り替える。
 var sigExp atomic.Int64
 
-const minSigExpRemaining = 12 * time.Hour
+const minSigExpRemaining = time.Hour
 
 // currentImageExp はいま発行する URL の期限を返す。
 func currentImageExp(now time.Time) int64 {

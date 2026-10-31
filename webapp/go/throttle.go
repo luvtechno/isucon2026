@@ -36,6 +36,9 @@ type Throttle struct {
 
 	imageMu     sync.Mutex
 	imageCounts map[string]int32
+
+	// 全ノード合計の毎秒の要求数（順序付け役が集計して配る）
+	global atomic.Int64
 }
 
 func NewThrottle() *Throttle {
@@ -165,7 +168,7 @@ func (t *Throttle) AfterPost(posted int) {
 
 func (t *Throttle) Before(r *http.Request) {
 	t.count.Add(1)
-	if !t.enabled || t.rps.Load() < t.minRPS {
+	if !t.enabled || t.global.Load() < t.minRPS {
 		return
 	}
 	d, ok := t.delays[classifyRequest(r)]

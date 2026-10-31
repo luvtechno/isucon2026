@@ -21,15 +21,16 @@ import (
 
 // フレームの形式: 長さ(4バイト、種別を含む) + 種別(1バイト) + 本文
 const (
-	frameHello    = 1 // replica → central: JSON{node, epoch, from}
-	frameSubmit   = 2 // replica → central: Cmd の JSON
-	frameEntry    = 3 // central → replica: seq(8) ts(8) Cmd の JSON
-	frameTick     = 4 // central → replica: ts(8) durable(8)
-	frameReply    = 5 // central → replica: req(8) status(4) code
-	frameReset    = 6 // central → replica: epoch(8) req(8) origin(1)
-	frameResetAck = 7 // replica → central: epoch(8)
-	frameCaughtUp = 8 // central → replica: seq(8)
-	frameInit     = 9 // replica → central: req(8)
+	frameHello    = 1  // replica → central: JSON{node, epoch, from}
+	frameSubmit   = 2  // replica → central: Cmd の JSON
+	frameEntry    = 3  // central → replica: seq(8) ts(8) Cmd の JSON
+	frameTick     = 4  // central → replica: ts(8) durable(8)
+	frameReply    = 5  // central → replica: req(8) status(4) code
+	frameReset    = 6  // central → replica: epoch(8) req(8) origin(1)
+	frameResetAck = 7  // replica → central: epoch(8)
+	frameCaughtUp = 8  // central → replica: seq(8)
+	frameInit     = 9  // replica → central: req(8)
+	frameLoad     = 10 // replica → central: rps(8)
 )
 
 func frameOf(typ byte, body ...[]byte) []byte {
@@ -122,6 +123,7 @@ type submitResult struct {
 }
 
 type peer struct {
+	rps  atomic.Int64
 	conn net.Conn
 	node uint8
 	mu   sync.Mutex
@@ -196,6 +198,11 @@ func (r *Replicator) Start() {
 	}
 	go r.replicaLoop()
 	go r.replicaSender()
+	go func() {
+		for range time.Tick(500 * time.Millisecond) {
+			r.queueFrame(frameOf(frameLoad, le64(uint64(r.app.throttle.rps.Load()))))
+		}
+	}()
 }
 
 func (r *Replicator) epochPath() string { return filepath.Join(r.dataDir, "epoch") }
@@ -309,9 +316,16 @@ func (r *Replicator) ticker() {
 		}
 		r.lastTs = now
 		r.freshTs.Store(now)
-		var body [16]byte
+		var total int64
+		total = r.app.throttle.rps.Load()
+		for p := range r.peers {
+			total += p.rps.Load()
+		}
+		r.app.throttle.global.Store(total)
+		var body [24]byte
 		binary.LittleEndian.PutUint64(body[:8], uint64(now))
 		binary.LittleEndian.PutUint64(body[8:], r.durable.Load())
+		binary.LittleEndian.PutUint64(body[16:], uint64(total))
 		f := frameOf(frameTick, body[:])
 		for p := range r.peers {
 			p.enqueue(f)
@@ -443,6 +457,8 @@ func (r *Replicator) servePeer(conn net.Conn) {
 				binary.LittleEndian.PutUint32(hdr[8:], uint32(status))
 				p.enqueue(frameOf(frameReply, hdr[:], []byte(code)))
 			}
+		case frameLoad:
+			p.rps.Store(int64(binary.LittleEndian.Uint64(body)))
 		case frameResetAck:
 			select {
 			case r.resetAcks <- binary.LittleEndian.Uint64(body):
@@ -585,7 +601,8 @@ func (r *Replicator) replicaSession() error {
 			r.applyEntry(&c, seq, ts)
 		case frameTick:
 			ts := int64(binary.LittleEndian.Uint64(body[:8]))
-			r.durable.Store(binary.LittleEndian.Uint64(body[8:]))
+			r.durable.Store(binary.LittleEndian.Uint64(body[8:16]))
+			r.app.throttle.global.Store(int64(binary.LittleEndian.Uint64(body[16:24])))
 			r.freshTs.Store(ts)
 		case frameReply:
 			req := binary.LittleEndian.Uint64(body[:8])
