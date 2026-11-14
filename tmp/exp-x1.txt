@@ -1,0 +1,33 @@
+Score: 528951
+Reason: 実行終了
+Stdout
+time=2026-10-31T04:56:07.638Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T04:56:10.640Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T04:56:13.637Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T04:56:16.638Z level=INFO msg="asia 2 日目: 46 人"
+time=2026-10-31T04:56:19.641Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T04:56:22.640Z level=INFO msg="america 2 日目: 16 人"
+time=2026-10-31T04:56:25.640Z level=INFO msg="asia 3 日目: 130 人"
+time=2026-10-31T04:56:28.645Z level=INFO msg="europe 3 日目: 57 人"
+time=2026-10-31T04:56:31.640Z level=INFO msg="america 3 日目: 47 人"
+time=2026-10-31T04:56:34.641Z level=INFO msg="asia 4 日目: 231 人"
+time=2026-10-31T04:56:37.640Z level=INFO msg="europe 4 日目: 169 人"
+time=2026-10-31T04:56:40.643Z level=INFO msg="america 4 日目: 136 人"
+time=2026-10-31T04:56:43.651Z level=INFO msg="asia 5 日目: 319 人"
+time=2026-10-31T04:56:46.642Z level=INFO msg="europe 5 日目: 498 人"
+time=2026-10-31T04:56:49.725Z level=INFO msg="america 5 日目: 386 人"
+time=2026-10-31T04:56:58.642Z level=INFO msg="asia 最終日（グランプリ）: 319 人"
+time=2026-10-31T04:56:58.645Z level=INFO msg="europe 最終日（グランプリ）: 497 人"
+time=2026-10-31T04:56:58.645Z level=INFO msg="america 最終日（グランプリ）: 385 人"
+time=2026-10-31T04:57:07.653Z level=INFO msg="グランプリ: アジア 251 人, ヨーロッパ 497 人, アメリカ 385 人"
+{
+  "pass": true,
+  "score": 528951,
+  "messages": [
+    "kesuna7212: 投稿できるはずの投稿期間で投稿が拒否されました: POST /api/posts: ステータスコード 409 が返りました（期待値 201、post_slot_unavailable）"
+  ]
+}
+Oct 31 04:55:58 ip-192-168-4-10 isureal[2516]: 2026/10/31 04:55:58 warmed pack: 590973705 bytes in 70.297644ms
+Oct 31 04:55:58 ip-192-168-1-10 isureal[2464]: 2026/10/31 04:55:58 warmed pack: 590973705 bytes in 71.798805ms
+Oct 31 04:55:58 ip-192-168-2-10 isureal[2486]: 2026/10/31 04:55:58 warmed pack: 590973705 bytes in 79.413143ms
+Oct 31 04:55:58 ip-192-168-3-10 isureal[2470]: 2026/10/31 04:55:58 warmed pack: 590973705 bytes in 80.897048ms

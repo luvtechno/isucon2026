@@ -1,0 +1,62 @@
+Score: 608378
+
+Score Breakdown: base=608378, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T08:08:53.428Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T08:08:56.430Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T08:08:59.428Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T08:09:02.428Z level=INFO msg="asia 2 日目: 54 人"
+time=2026-10-31T08:09:05.429Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T08:09:08.427Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T08:09:09.951Z level=INFO msg="user moved" user=rufuchi-5495 from=america to=europe
+time=2026-10-31T08:09:11.430Z level=INFO msg="asia 3 日目: 162 人"
+time=2026-10-31T08:09:12.798Z level=INFO msg="user moved" user=chisa-5701 from=asia to=europe
+time=2026-10-31T08:09:12.927Z level=INFO msg="user moved" user=yumaivy.5771 from=asia to=america
+time=2026-10-31T08:09:13.409Z level=INFO msg="user moved" user=yumaivy.5771 from=america to=asia
+time=2026-10-31T08:09:13.498Z level=INFO msg="user moved" user=chisa-5701 from=europe to=asia
+time=2026-10-31T08:09:14.431Z level=INFO msg="europe 3 日目: 58 人"
+time=2026-10-31T08:09:16.101Z level=INFO msg="user moved" user=hakoben-5950 from=asia to=europe
+time=2026-10-31T08:09:17.427Z level=INFO msg="america 3 日目: 55 人"
+time=2026-10-31T08:09:17.633Z level=INFO msg="user moved" user=keyaivy_6254 from=asia to=europe
+time=2026-10-31T08:09:18.061Z level=INFO msg="user moved" user=rufuchi-5495 from=europe to=asia
+time=2026-10-31T08:09:19.867Z level=INFO msg="user moved" user=shileonoa6668 from=america to=asia
+time=2026-10-31T08:09:20.430Z level=INFO msg="asia 4 日目: 368 人"
+time=2026-10-31T08:09:23.429Z level=INFO msg="europe 4 日目: 171 人"
+time=2026-10-31T08:09:24.341Z level=INFO msg="user moved" user=shileonoa6668 from=asia to=america
+time=2026-10-31T08:09:24.511Z level=INFO msg="user moved" user=evatorya.7251 from=asia to=america
+time=2026-10-31T08:09:24.579Z level=INFO msg="user moved" user=yumaivy.5771 from=asia to=america
+time=2026-10-31T08:09:24.866Z level=INFO msg="user moved" user=chisa-5701 from=asia to=europe
+time=2026-10-31T08:09:25.184Z level=INFO msg="user moved" user=evatorya.7251 from=america to=europe
+time=2026-10-31T08:09:25.448Z level=INFO msg="user moved" user=tasu_7778 from=asia to=europe
+time=2026-10-31T08:09:25.653Z level=INFO msg="user moved" user=keyaivy_6254 from=europe to=america
+time=2026-10-31T08:09:25.772Z level=INFO msg="user moved" user=rufuchi-5495 from=asia to=europe
+time=2026-10-31T08:09:25.897Z level=INFO msg="user moved" user=keansa8082 from=asia to=europe
+time=2026-10-31T08:09:26.037Z level=INFO msg="user moved" user=soldan-8050 from=asia to=europe
+time=2026-10-31T08:09:26.054Z level=INFO msg="user moved" user=fudannu-7786 from=asia to=america
+time=2026-10-31T08:09:26.153Z level=INFO msg="user moved" user=liatasol-8167 from=europe to=asia
+time=2026-10-31T08:09:26.349Z level=INFO msg="user moved" user=ivyheleo8623 from=europe to=america
+time=2026-10-31T08:09:26.453Z level=INFO msg="america 4 日目: 171 人"
+time=2026-10-31T08:09:27.261Z level=INFO msg="user moved" user=koha-8909 from=europe to=asia
+time=2026-10-31T08:09:29.284Z level=INFO msg="user moved" user=hozoe9367 from=america to=europe
+time=2026-10-31T08:09:29.445Z level=INFO msg="asia 5 日目: 553 人"
+time=2026-10-31T08:09:30.000Z level=INFO msg="user moved" user=benanko-9645 from=america to=asia
+time=2026-10-31T08:09:31.227Z level=INFO msg="user moved" user=sashi-9726 from=america to=asia
+time=2026-10-31T08:09:32.439Z level=INFO msg="europe 5 日目: 503 人"
+time=2026-10-31T08:09:33.812Z level=INFO msg="user moved" user=tsunoa.9797 from=america to=asia
+time=2026-10-31T08:09:35.458Z level=INFO msg="america 5 日目: 483 人"
+time=2026-10-31T08:09:44.430Z level=INFO msg="europe 最終日（グランプリ）: 502 人"
+time=2026-10-31T08:09:44.431Z level=INFO msg="asia 最終日（グランプリ）: 555 人"
+time=2026-10-31T08:09:44.431Z level=INFO msg="america 最終日（グランプリ）: 482 人"
+time=2026-10-31T08:09:53.388Z level=INFO msg="グランプリ: アジア 276 人, ヨーロッパ 502 人, アメリカ 482 人"
+{
+  "pass": true,
+  "score": 608378,
+  "messages": []
+}
+
+Re-Enqueue

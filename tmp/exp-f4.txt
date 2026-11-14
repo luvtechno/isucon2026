@@ -1,0 +1,48 @@
+Score: 538787
+Reason: 実行終了
+Stdout
+time=2026-10-31T02:56:37.558Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:56:40.560Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:56:43.558Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:56:46.558Z level=INFO msg="asia 2 日目: 50 人"
+time=2026-10-31T02:56:49.560Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T02:56:52.558Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T02:56:55.560Z level=INFO msg="asia 3 日目: 122 人"
+time=2026-10-31T02:56:58.558Z level=INFO msg="europe 3 日目: 55 人"
+time=2026-10-31T02:57:01.560Z level=INFO msg="america 3 日目: 54 人"
+time=2026-10-31T02:57:04.566Z level=INFO msg="asia 4 日目: 187 人"
+time=2026-10-31T02:57:07.558Z level=INFO msg="europe 4 日目: 160 人"
+time=2026-10-31T02:57:10.561Z level=INFO msg="america 4 日目: 165 人"
+time=2026-10-31T02:57:13.570Z level=INFO msg="asia 5 日目: 249 人"
+time=2026-10-31T02:57:16.564Z level=INFO msg="europe 5 日目: 466 人"
+time=2026-10-31T02:57:19.574Z level=INFO msg="america 5 日目: 488 人"
+time=2026-10-31T02:57:28.590Z level=INFO msg="america 最終日（グランプリ）: 487 人"
+time=2026-10-31T02:57:28.604Z level=INFO msg="europe 最終日（グランプリ）: 465 人"
+time=2026-10-31T02:57:28.604Z level=INFO msg="asia 最終日（グランプリ）: 249 人"
+time=2026-10-31T02:57:37.575Z level=INFO msg="グランプリ: アジア 247 人, ヨーロッパ 457 人, アメリカ 484 人"
+{
+  "pass": true,
+  "score": 538787,
+  "messages": [
+    "croquette_sodachi_1427: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "nerutor-9226: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "waoris6457: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sardines_en_cocotte_de_terre_2092: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "naha12513: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "ultodan-10080: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": readfrom tcp 10.27.38.210:39076-\u003eROUTER_HOST:8080: write tcp 10.27.38.210:39076-\u003e57.180
+    "tsuchiul-7425: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "yuke10590: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "marhi-9655: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "benho-6800: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kueva.5870: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "kamarel-10815: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "yueye_anchundan_582: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "capybaras_en_promenade_4662: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "hibenme-7819: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "chivinmax.9341: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "shiulse-6778: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "solkuan_7212: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "marmeku.10252: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "teri-8327: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）"
+  ]
+}

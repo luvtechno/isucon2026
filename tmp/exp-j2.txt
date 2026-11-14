@@ -1,0 +1,37 @@
+Score: 556820
+Reason: 実行終了
+Stdout
+time=2026-10-31T05:56:42.093Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T05:56:45.095Z level=INFO msg="europe 1 日目: 8 人"
+time=2026-10-31T05:56:48.094Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T05:56:51.093Z level=INFO msg="asia 2 日目: 51 人"
+time=2026-10-31T05:56:54.097Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T05:56:57.096Z level=INFO msg="america 2 日目: 20 人"
+time=2026-10-31T05:57:00.097Z level=INFO msg="asia 3 日目: 152 人"
+time=2026-10-31T05:57:03.095Z level=INFO msg="europe 3 日目: 66 人"
+time=2026-10-31T05:57:06.095Z level=INFO msg="america 3 日目: 65 人"
+time=2026-10-31T05:57:09.099Z level=INFO msg="asia 4 日目: 439 人"
+time=2026-10-31T05:57:12.104Z level=INFO msg="europe 4 日目: 198 人"
+time=2026-10-31T05:57:15.145Z level=INFO msg="america 4 日目: 197 人"
+time=2026-10-31T05:57:18.105Z level=INFO msg="asia 5 日目: 733 人"
+time=2026-10-31T05:57:21.125Z level=INFO msg="europe 5 日目: 569 人"
+time=2026-10-31T05:57:24.882Z level=INFO msg="america 5 日目: 570 人"
+time=2026-10-31T05:57:33.240Z level=INFO msg="america 最終日（グランプリ）: 569 人"
+time=2026-10-31T05:57:33.240Z level=INFO msg="europe 最終日（グランプリ）: 568 人"
+time=2026-10-31T05:57:33.242Z level=INFO msg="asia 最終日（グランプリ）: 735 人"
+time=2026-10-31T05:57:42.113Z level=INFO msg="グランプリ: アジア 148 人, ヨーロッパ 566 人, アメリカ 562 人"
+{
+  "pass": true,
+  "score": 556820,
+  "messages": [
+    "chileo_12526: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "hose.7543: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "shikemia8161: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "maxya_11892: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+Oct 31 05:56:33 ip-192-168-4-10 isureal[12284]: 2026/10/31 05:56:33 warmed pack: 590973705 bytes in 89.840025ms
+Oct 31 05:56:34 ip-192-168-1-10 isureal[12351]: 2026/10/31 05:56:34 warmed pack: 590973705 bytes in 914.195933ms
+Oct 31 05:57:42 ip-192-168-1-10 isureal[12351]: {"time":"2026-10-31T05:57:42.052189229Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:53406: read: connection
+Oct 31 05:56:33 ip-192-168-2-10 isureal[12079]: 2026/10/31 05:56:33 warmed pack: 590973705 bytes in 80.982793ms
+Oct 31 05:56:33 ip-192-168-3-10 isureal[12059]: 2026/10/31 05:56:33 warmed pack: 590973705 bytes in 81.060031ms

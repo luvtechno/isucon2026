@@ -1,0 +1,57 @@
+Score: 615485
+
+Score Breakdown: base=615485, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T04:25:40.472Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T04:25:43.474Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T04:25:46.472Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T04:25:49.472Z level=INFO msg="asia 2 日目: 48 人"
+time=2026-10-31T04:25:52.473Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T04:25:55.471Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T04:25:58.474Z level=INFO msg="asia 3 日目: 138 人"
+time=2026-10-31T04:25:59.446Z level=INFO msg="user moved" user=evamiasu.5525 from=america to=europe
+time=2026-10-31T04:25:59.473Z level=INFO msg="user moved" user=evate-5540 from=asia to=america
+time=2026-10-31T04:25:59.972Z level=INFO msg="user moved" user=vinzoemax5727 from=asia to=america
+time=2026-10-31T04:25:59.976Z level=INFO msg="user moved" user=ruulku5656 from=asia to=europe
+time=2026-10-31T04:26:00.335Z level=INFO msg="user moved" user=vinzoemax5727 from=america to=europe
+time=2026-10-31T04:26:01.039Z level=INFO msg="user moved" user=evate-5540 from=america to=europe
+time=2026-10-31T04:26:01.476Z level=INFO msg="europe 3 日目: 69 人"
+time=2026-10-31T04:26:03.361Z level=INFO msg="user moved" user=evamiasu.5525 from=europe to=asia
+time=2026-10-31T04:26:04.472Z level=INFO msg="america 3 日目: 57 人"
+time=2026-10-31T04:26:07.474Z level=INFO msg="asia 4 日目: 238 人"
+time=2026-10-31T04:26:10.473Z level=INFO msg="europe 4 日目: 196 人"
+time=2026-10-31T04:26:11.327Z level=INFO msg="user moved" user=evamiasu.5525 from=asia to=america
+time=2026-10-31T04:26:11.948Z level=INFO msg="user moved" user=torel.7077 from=asia to=europe
+time=2026-10-31T04:26:12.195Z level=INFO msg="user moved" user=vinzoemax5727 from=europe to=america
+time=2026-10-31T04:26:12.742Z level=INFO msg="user moved" user=shiyu-7144 from=asia to=america
+time=2026-10-31T04:26:12.815Z level=INFO msg="user moved" user=sate-7791 from=europe to=america
+time=2026-10-31T04:26:13.074Z level=INFO msg="user moved" user=ruulku5656 from=europe to=america
+time=2026-10-31T04:26:13.091Z level=INFO msg="user moved" user=sate-7791 from=america to=asia
+time=2026-10-31T04:26:13.476Z level=INFO msg="america 4 日目: 177 人"
+time=2026-10-31T04:26:14.122Z level=INFO msg="user moved" user=evate-5540 from=europe to=asia
+time=2026-10-31T04:26:15.876Z level=INFO msg="user moved" user=kamito-8469 from=america to=europe
+time=2026-10-31T04:26:16.481Z level=INFO msg="asia 5 日目: 337 人"
+time=2026-10-31T04:26:17.247Z level=INFO msg="user moved" user=nomarchi-8879 from=america to=europe
+time=2026-10-31T04:26:19.475Z level=INFO msg="europe 5 日目: 577 人"
+time=2026-10-31T04:26:22.506Z level=INFO msg="america 5 日目: 506 人"
+time=2026-10-31T04:26:31.474Z level=INFO msg="asia 最終日（グランプリ）: 336 人"
+time=2026-10-31T04:26:31.486Z level=INFO msg="europe 最終日（グランプリ）: 576 人"
+time=2026-10-31T04:26:31.492Z level=INFO msg="america 最終日（グランプリ）: 505 人"
+time=2026-10-31T04:26:40.462Z level=INFO msg="グランプリ: アジア 298 人, ヨーロッパ 576 人, アメリカ 505 人"
+{
+  "pass": true,
+  "score": 615485,
+  "messages": [
+    "davi_pereira_3221: ログアウトできません: POST /api/auth/logout: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/logout\": EOF",
+    "reulmi_13309: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "ismo_14489: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sake-9130: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+
+Re-Enqueue

@@ -1,0 +1,85 @@
+Score: 518125
+
+Score Breakdown: base=518125, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T02:31:23.594Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:31:26.595Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:31:29.593Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:31:32.595Z level=INFO msg="asia 2 日目: 46 人"
+time=2026-10-31T02:31:35.598Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T02:31:36.775Z level=INFO msg="user moved" user=maxulor.5357 from=asia to=europe
+time=2026-10-31T02:31:38.593Z level=INFO msg="america 2 日目: 16 人"
+time=2026-10-31T02:31:41.596Z level=INFO msg="asia 3 日目: 129 人"
+time=2026-10-31T02:31:42.513Z level=INFO msg="user moved" user=chino5571 from=asia to=america
+time=2026-10-31T02:31:42.674Z level=INFO msg="user moved" user=suwa-5548 from=asia to=america
+time=2026-10-31T02:31:42.921Z level=INFO msg="user moved" user=chino5571 from=america to=asia
+time=2026-10-31T02:31:43.140Z level=INFO msg="user moved" user=suwa-5548 from=america to=europe
+time=2026-10-31T02:31:43.394Z level=INFO msg="user moved" user=totor_5662 from=asia to=europe
+time=2026-10-31T02:31:44.040Z level=INFO msg="user moved" user=yahiyu_5799 from=asia to=europe
+time=2026-10-31T02:31:44.593Z level=INFO msg="europe 3 日目: 71 人"
+time=2026-10-31T02:31:44.625Z level=INFO msg="user moved" user=yahiyu_5799 from=europe to=america
+time=2026-10-31T02:31:44.732Z level=INFO msg="user moved" user=fuliaki.5826 from=asia to=europe
+time=2026-10-31T02:31:45.634Z level=INFO msg="user moved" user=rutechi.6019 from=asia to=europe
+time=2026-10-31T02:31:46.153Z level=INFO msg="user moved" user=maxulor.5357 from=europe to=asia
+time=2026-10-31T02:31:47.595Z level=INFO msg="america 3 日目: 51 人"
+time=2026-10-31T02:31:49.839Z level=INFO msg="user moved" user=kemia.6516 from=america to=asia
+time=2026-10-31T02:31:50.603Z level=INFO msg="asia 4 日目: 372 人"
+time=2026-10-31T02:31:51.666Z level=INFO msg="user moved" user=solhoke6746 from=asia to=america
+time=2026-10-31T02:31:52.096Z level=INFO msg="user moved" user=kemia.6516 from=asia to=america
+time=2026-10-31T02:31:52.168Z level=INFO msg="user moved" user=solhoke6746 from=america to=europe
+time=2026-10-31T02:31:52.218Z level=INFO msg="user moved" user=maxulor.5357 from=asia to=europe
+time=2026-10-31T02:31:52.515Z level=INFO msg="user moved" user=chino5571 from=asia to=america
+time=2026-10-31T02:31:53.046Z level=INFO msg="user moved" user=ribenhe.7325 from=asia to=america
+time=2026-10-31T02:31:53.433Z level=INFO msg="user moved" user=ribenhe.7325 from=america to=europe
+time=2026-10-31T02:31:53.597Z level=INFO msg="europe 4 日目: 207 人"
+time=2026-10-31T02:31:53.861Z level=INFO msg="user moved" user=tornotor7938 from=asia to=america
+time=2026-10-31T02:31:54.171Z level=INFO msg="user moved" user=tornotor7938 from=america to=europe
+time=2026-10-31T02:31:54.480Z level=INFO msg="user moved" user=kaleo-8050 from=asia to=europe
+time=2026-10-31T02:31:54.564Z level=INFO msg="user moved" user=mere_8378 from=asia to=europe
+time=2026-10-31T02:31:55.813Z level=INFO msg="user moved" user=suwa-5548 from=europe to=asia
+time=2026-10-31T02:31:56.607Z level=INFO msg="america 4 日目: 155 人"
+time=2026-10-31T02:31:56.902Z level=INFO msg="user moved" user=fuliaki.5826 from=europe to=asia
+time=2026-10-31T02:31:57.032Z level=INFO msg="user moved" user=yahiyu_5799 from=america to=asia
+time=2026-10-31T02:31:57.291Z level=INFO msg="user moved" user=rutechi.6019 from=europe to=asia
+time=2026-10-31T02:31:58.338Z level=INFO msg="user moved" user=kata-9205 from=america to=europe
+time=2026-10-31T02:31:58.544Z level=INFO msg="user moved" user=moka_9112 from=europe to=asia
+time=2026-10-31T02:31:59.601Z level=INFO msg="asia 5 日目: 1093 人"
+time=2026-10-31T02:32:02.859Z level=INFO msg="europe 5 日目: 602 人"
+time=2026-10-31T02:32:05.701Z level=INFO msg="america 5 日目: 451 人"
+time=2026-10-31T02:32:14.667Z level=INFO msg="europe 最終日（グランプリ）: 601 人"
+time=2026-10-31T02:32:14.670Z level=INFO msg="asia 最終日（グランプリ）: 1092 人"
+time=2026-10-31T02:32:14.670Z level=INFO msg="america 最終日（グランプリ）: 450 人"
+time=2026-10-31T02:32:23.658Z level=INFO msg="グランプリ: アジア 787 人, ヨーロッパ 453 人, アメリカ 374 人"
+{
+  "pass": true,
+  "score": 518125,
+  "messages": [
+    "tsusol.14778: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sowa.15198: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "teku-12554: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "shiko.13507: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kenuha_14537: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "helia-13001: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "ruhe_14164: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "romax.16694: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "ivyse10175: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "himia6713: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sewanoa5709: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "danku11791: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "yoriyu_19315: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "mashi18178: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "teel16645: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "tori-11203: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "mavin.11740: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": readfrom tcp 10.27.43.140:39310-\u003eROUTER_HOST:8080: write tcp 10.27.43.140:39310-\u003eROUTER_HOST:8080: use of closed network connection",
+    "hiwano-12291: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "soansa-14621: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "zoeni.13860: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+
+Re-Enqueue

@@ -1,0 +1,51 @@
+e1 asia[] other[] rps[0] score=518125 | asia=1093 europe=602 america=451 | グランプリ: アジア 787 人, ヨーロッパ 453 人, アメリカ 374 人 | msgs=20
+e2 asia[all=20] other[] rps[0] score=484907 | asia=1265 europe=557 america=465 | グランプリ: アジア 843 人, ヨーロッパ 406 人, アメリカ 364 人 | msgs=20
+e3 asia[export=500] other[export=500] rps[1000] score=432107 | asia=1258 europe=505 america=510 | グランプリ: アジア 745 人, ヨーロッパ 351 人, アメリカ 397 人 | msgs=20
+e4 asia[] other[] rps[0] score=499288 | asia=1264 europe=561 america=511 | グランプリ: アジア 814 人, ヨーロッパ 362 人, アメリカ 357 人 | msgs=20
+e5 asia[post=2000] other[] rps[0] score=511189 | asia=21 europe=490 america=445 | グランプリ: アジア 20 人, ヨーロッパ 485 人, アメリカ 442 人 | msgs=10
+f1 softcap=162 delay=2000 other=0 score=509132 | asia: 1=18 2=48 3=138 4=407 5=718 | asia=718 europe=588 america=488 | グランプリ: アジア 365 人, ヨーロッパ 567 人, アメリカ 459 人 | msgs=20
+f2 softcap=54 delay=2000 other=0 score=546385 | asia: 1=18 2=54 3=154 4=247 5=341 | asia=341 europe=568 america=554 | グランプリ: アジア 274 人, ヨーロッパ 558 人, アメリカ 550 人 | msgs=20
+f3 softcap=27 delay=2000 other=0 score=506261 | asia: 1=18 2=50 3=104 4=150 5=190 | asia=190 europe=538 america=455 | グランプリ: アジア 186 人, ヨーロッパ 527 人, アメリカ 447 人 | msgs=20
+f4 softcap=36 delay=2000 other=0 score=538787 | asia: 1=18 2=50 3=122 4=187 5=249 | asia=249 europe=466 america=488 | グランプリ: アジア 247 人, ヨーロッパ 457 人, アメリカ 484 人 | msgs=20
+g1 softcap=54 delay=2000 other=0 score=558433 | asia: 1=18 2=47 3=137 4=373 5=905 | asia=905 europe=530 america=494 | グランプリ: アジア 594 人, ヨーロッパ 506 人, アメリカ 481 人 | msgs=20
+g2 softcap=54 delay=2000 other=0 score=507415 | asia: 1=18 2=54 3=159 4=248 5=350 | asia=350 europe=547 america=475 | グランプリ: アジア 293 人, ヨーロッパ 530 人, アメリカ 469 人 | msgs=20
+g3 softcap=54 delay=2000 other=0 score=455298 | asia: 1=18 2=50 3=145 4=248 5=332 | asia=332 europe=478 america=563 | グランプリ: アジア 317 人, ヨーロッパ 465 人, アメリカ 553 人 | msgs=20
+n1 softcap=54 delay=2000 other=0 score=583210 | asia: 1=18 2=48 3=138 4=232 5=329 | asia=329 europe=536 america=460 | グランプリ: アジア 324 人, ヨーロッパ 532 人, アメリカ 454 人 | msgs=20
+n2 softcap=54 delay=2000 other=0 score=531376 | asia: 1=18 2=54 3=158 4=256 5=338 | asia=338 europe=544 america=488 | グランプリ: アジア 332 人, ヨーロッパ 535 人, アメリカ 482 人 | msgs=20
+n3 softcap=54 delay=2000 other=0 score=532665 | asia: 1=18 2=45 3=127 4=221 5=323 | asia=323 europe=481 america=396 | グランプリ: アジア 309 人, ヨーロッパ 476 人, アメリカ 393 人 | msgs=20
+p1 cap=54/0 asia[login=10] other[] score=485230 | asia=338 europe=333 america=485 | a330, e327, u479 | mem a22943 e11591 u12582 
+q1 cap=54/0 asia[] other[] score=392120 | asia=340 europe=550 america=493 | a324, e528, u485 | mem a12699 e8288 u7835 
+q2 cap=54/0 asia[] other[] score=467518 | asia=332 europe=564 america=524 | a281, e559, u519 | mem a34285 e13386 u12789 
+r1 cap=54/0 asia[] other[] [ISUREAL_STAGGER_MS=1500] score=523954 | asia=335 europe=542 america=469 | a235, e539, u466 | mem a23645 e12623 u11745 
+s1 cap=54/0 asia[memories=15] other[] [ISUREAL_STAGGER_MS=1500] score=589550 | asia=350 europe=511 america=477 | a343, e510, u475 | mem a22725 e17178 u15893 
+s2 cap=54/0 asia[memories=15] other[] [ISUREAL_STAGGER_MS=1500 ISUREAL_PARK_MS=100 ISUREAL_PARK_RPS=1000] score=578762 | asia=322 europe=552 america=396 | a321, e550, u394 | mem a21026 e18262 u15376 
+t1 cap=54 asia[memories=100]@7000 [ISUREAL_STAGGER_MS=1500] score=525660 | asia=344 europe=402 america=342 | a341, e401, u341 | mem a21571 e16045 u14211 
+u1 cap=54 asia[login=50] other[login=20]@6000 [ISUREAL_STAGGER_MS=1500] score=525037 | asia=337 europe=474 america=467 | a329, e473, u466 | mem a23374 e12299 u12028 
+v1 cap=54 asia[memories=15] other[]@0 [ISUREAL_STAGGER_MS=1500] score=518970 | asia=324 europe=674 america=424 | a189, e670, u421 | mem a19467 e14027 u11680 
+v2 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=1500] score=615485 | asia=337 europe=577 america=506 | a298, e576, u505 | mem a15624 e20666 u19106 
+v3 cap=54 asia[memories=300] other[]@6000 [ISUREAL_STAGGER_MS=1500] score=560787 | asia=341 europe=403 america=516 | a337, e402, u514 | mem a13157 e18591 u18860 
+v4 cap=54 asia[memories=150] other[]@4500 [ISUREAL_STAGGER_MS=1500] score=541028 | asia=332 europe=401 america=394 | a328, e401, u393 | mem a14042 e18901 u17485 
+w1 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=579119 | asia=356 europe=559 america=464 | a269, e558, u462 | mem a17157 e17417 u16272 
+x1 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=528951 | asia=319 europe=498 america=386 | a251, e497, u385 | mem a15584 e17227 u15129 
+x2 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=602970 | asia=340 europe=503 america=361 | a276, e502, u360 | mem a17425 e23493 u19863 
+h1 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_HISTIMAGE_SHED_RPS=7000] score=0 | | a0, e0, u0 | mem a9020 e6309 u4251 
+h2 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_HISTIMAGE_SHED_RPS=7000 ISUREAL_HISTIMAGE_SHED_PCT=15] score=549566 | asia=332 europe=539 america=492 | a274, e538, u491 | mem a15536 e20320 u19124 
+i1 cap=54 asia[month=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=555040 | asia=355 europe=581 america=503 | a239, e580, u502 | mem a16823 e15317 u14809 
+i2 cap=54 asia[month=150,date=150,histimg=150] other[histimg=50]@6000 [ISUREAL_STAGGER_MS=2500] score=513454 | asia=334 europe=536 america=349 | a276, e535, u348 | mem a16486 e15530 u14014 
+j1 cap=108 asia[memories=150](無効) other[]@6000 [ISUREAL_STAGGER_MS=2500] score=555588 | asia=557 europe=569 america=535 | a160, e567, u534 | mem a25177 e11765 u10761 
+j2 cap=162 asia[memories=150](無効) other[]@6000 [ISUREAL_STAGGER_MS=2500] score=556820 | asia=733 europe=569 america=570 | a148, e566, u562 | mem a24819 e10742 u10051 
+j3 cap=36 asia[memories=150](無効) other[]@6000 [ISUREAL_STAGGER_MS=2500] score=601501 | asia=247 europe=474 america=455 | a203, e473, u453 | mem a26556 e18078 u17544 
+j4 cap=36 asia[memories=150](無効) other[]@6000 [ISUREAL_STAGGER_MS=2500] score=545670 | asia=246 europe=476 america=401 | a205, e475, u399 | mem a26978 e15701 u13567 
+k1 cap=108 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=462155 | asia=564 europe=440 america=339 | a270, e439, u338 | mem a19514 e11198 u9018 
+k2 cap=54 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=570003 | asia=349 europe=560 america=383 | a287, e559, u382 | mem a17300 e18998 u16061 
+k3 cap=36 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=607654 | asia=232 europe=596 america=458 | a180, e595, u457 | mem a14204 e22167 u19682 
+k4 cap=36 asia[memories=150] other[]@6000 [ISUREAL_STAGGER_MS=2500] score=573278 | asia=254 europe=523 america=479 | a198, e522, u478 | mem a14041 e19311 u18303 
+l1 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=9000 ISUREAL_CLOSED_LOOP_WAIT_MS=300] score=548646 | asia=300 europe=528 america=397 | a235, e527, u396 | mem a26606 e15032 u13009 
+l2 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=7000 ISUREAL_CLOSED_LOOP_WAIT_MS=300] score=600982 | asia=340 europe=392 america=373 | a284, e391, u372 | mem a19191 e22084 u20936 
+l3 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=6000 ISUREAL_CLOSED_LOOP_WAIT_MS=300] score=562220 | asia=328 europe=477 america=464 | a274, e476, u463 | mem a18175 e16940 u17229 
+m1 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=7000 ISUREAL_CLOSED_LOOP_WAIT_MS=300] score=629638 | asia=345 europe=591 america=483 | a290, e590, u482 | mem a14722 e21003 u20731 
+m2 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=8000 ISUREAL_CLOSED_LOOP_WAIT_MS=300] score=549063 | asia=351 europe=547 america=448 | a235, e546, u447 | mem a18738 e15350 u14841 
+o1 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=7000 ISUREAL_CLOSED_LOOP_WAIT_MS=300 ISUREAL_IMAGE_CC=private,max-age=4] score=532435 | asia=330 europe=314 america=421 | a287, e313, u420 | mem a16591 e17163 u19325 
+o2 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=7000 ISUREAL_CLOSED_LOOP_WAIT_MS=1000] score=471189 | asia=344 europe=390 america=485 | a238, e389, u484 | mem a21839 e10194 u10352 
+o3 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=6000 ISUREAL_CLOSED_LOOP_WAIT_MS=300] score=587748 | asia=342 europe=391 america=406 | a276, e390, u405 | mem a14264 e22367 u21404 
+o4 cap=54 asia[] other[]@6000 [ISUREAL_STAGGER_MS=2500 ISUREAL_CLOSED_LOOP_TARGET=6500 ISUREAL_CLOSED_LOOP_WAIT_MS=300 ISUREAL_MEM_PAGE=10 ISUREAL_MEM_PAGE_RPS=5000] score=567852 | asia=338 europe=470 america=507 | a281, e469, u505 | mem a15683 e26853 u29800 

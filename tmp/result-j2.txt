@@ -1,0 +1,77 @@
+Score: 556820
+
+Score Breakdown: base=556820, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T05:56:42.093Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T05:56:42.955Z level=INFO msg="user moved" user=vinzoeme_5062 from=asia to=europe
+time=2026-10-31T05:56:45.095Z level=INFO msg="europe 1 日目: 8 人"
+time=2026-10-31T05:56:48.094Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T05:56:51.093Z level=INFO msg="asia 2 日目: 51 人"
+time=2026-10-31T05:56:53.841Z level=INFO msg="user moved" user=heyo5275 from=asia to=america
+time=2026-10-31T05:56:54.097Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T05:56:54.537Z level=INFO msg="user moved" user=heyo5275 from=america to=asia
+time=2026-10-31T05:56:55.267Z level=INFO msg="user moved" user=vinzoeme_5062 from=europe to=asia
+time=2026-10-31T05:56:57.096Z level=INFO msg="america 2 日目: 20 人"
+time=2026-10-31T05:57:00.097Z level=INFO msg="asia 3 日目: 152 人"
+time=2026-10-31T05:57:00.973Z level=INFO msg="user moved" user=vinzoeme_5062 from=asia to=europe
+time=2026-10-31T05:57:01.031Z level=INFO msg="user moved" user=heyo5275 from=asia to=america
+time=2026-10-31T05:57:02.233Z level=INFO msg="user moved" user=anchiku.5833 from=asia to=america
+time=2026-10-31T05:57:02.641Z level=INFO msg="user moved" user=anchiku.5833 from=america to=asia
+time=2026-10-31T05:57:02.874Z level=INFO msg="user moved" user=kose.5982 from=asia to=europe
+time=2026-10-31T05:57:03.095Z level=INFO msg="europe 3 日目: 66 人"
+time=2026-10-31T05:57:03.294Z level=INFO msg="user moved" user=chiku.6080 from=asia to=europe
+time=2026-10-31T05:57:03.955Z level=INFO msg="user moved" user=shikeul_6076 from=asia to=europe
+time=2026-10-31T05:57:04.322Z level=INFO msg="user moved" user=kune6270 from=asia to=america
+time=2026-10-31T05:57:04.406Z level=INFO msg="user moved" user=raliaho_6312 from=asia to=europe
+time=2026-10-31T05:57:05.113Z level=INFO msg="user moved" user=kune6270 from=america to=europe
+time=2026-10-31T05:57:06.095Z level=INFO msg="america 3 日目: 65 人"
+time=2026-10-31T05:57:09.099Z level=INFO msg="asia 4 日目: 439 人"
+time=2026-10-31T05:57:09.860Z level=INFO msg="user moved" user=anchiku.5833 from=asia to=america
+time=2026-10-31T05:57:10.633Z level=INFO msg="user moved" user=fuzoe6926 from=asia to=europe
+time=2026-10-31T05:57:10.670Z level=INFO msg="user moved" user=chiruivy.6962 from=asia to=america
+time=2026-10-31T05:57:11.226Z level=INFO msg="user moved" user=chiruivy.6962 from=america to=europe
+time=2026-10-31T05:57:11.231Z level=INFO msg="user moved" user=fuzoe6926 from=europe to=asia
+time=2026-10-31T05:57:12.097Z level=INFO msg="user moved" user=evawama7044 from=asia to=europe
+time=2026-10-31T05:57:12.104Z level=INFO msg="europe 4 日目: 198 人"
+time=2026-10-31T05:57:13.930Z level=INFO msg="user moved" user=tosose.7626 from=asia to=america
+time=2026-10-31T05:57:14.509Z level=INFO msg="user moved" user=raliaho_6312 from=europe to=asia
+time=2026-10-31T05:57:14.954Z level=INFO msg="user moved" user=seben.8611 from=asia to=europe
+time=2026-10-31T05:57:15.139Z level=INFO msg="user moved" user=tosose.7626 from=america to=asia
+time=2026-10-31T05:57:15.145Z level=INFO msg="america 4 日目: 197 人"
+time=2026-10-31T05:57:15.267Z level=INFO msg="user moved" user=kune6270 from=europe to=asia
+time=2026-10-31T05:57:15.356Z level=INFO msg="user moved" user=anme_7804 from=asia to=europe
+time=2026-10-31T05:57:16.274Z level=INFO msg="user moved" user=shikeul_6076 from=europe to=america
+time=2026-10-31T05:57:16.399Z level=INFO msg="user moved" user=kose.5982 from=europe to=asia
+time=2026-10-31T05:57:16.621Z level=INFO msg="user moved" user=vinzoeme_5062 from=europe to=asia
+time=2026-10-31T05:57:16.622Z level=INFO msg="user moved" user=semia.9587 from=europe to=asia
+time=2026-10-31T05:57:17.069Z level=INFO msg="user moved" user=resolha_9651 from=europe to=america
+time=2026-10-31T05:57:17.226Z level=INFO msg="user moved" user=yatsu9848 from=europe to=america
+time=2026-10-31T05:57:17.395Z level=INFO msg="user moved" user=fuha-9067 from=asia to=america
+time=2026-10-31T05:57:17.682Z level=INFO msg="user moved" user=rumax.10008 from=america to=europe
+time=2026-10-31T05:57:18.105Z level=INFO msg="asia 5 日目: 733 人"
+time=2026-10-31T05:57:19.379Z level=INFO msg="user moved" user=heyo5275 from=america to=asia
+time=2026-10-31T05:57:20.140Z level=INFO msg="user moved" user=marmuto_10334 from=america to=asia
+time=2026-10-31T05:57:20.958Z level=INFO msg="user moved" user=sami_10504 from=america to=asia
+time=2026-10-31T05:57:21.125Z level=INFO msg="europe 5 日目: 569 人"
+time=2026-10-31T05:57:24.882Z level=INFO msg="america 5 日目: 570 人"
+time=2026-10-31T05:57:33.240Z level=INFO msg="america 最終日（グランプリ）: 569 人"
+time=2026-10-31T05:57:33.240Z level=INFO msg="europe 最終日（グランプリ）: 568 人"
+time=2026-10-31T05:57:33.242Z level=INFO msg="asia 最終日（グランプリ）: 735 人"
+time=2026-10-31T05:57:42.113Z level=INFO msg="グランプリ: アジア 148 人, ヨーロッパ 566 人, アメリカ 562 人"
+{
+  "pass": true,
+  "score": 556820,
+  "messages": [
+    "chileo_12526: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "hose.7543: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "shikemia8161: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "maxya_11892: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+
+Re-Enqueue

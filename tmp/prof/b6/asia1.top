@@ -1,0 +1,15 @@
+%Cpu(s): 81.8 us,  4.5 sy,  0.0 ni,  0.0 id,  9.1 wa,  0.0 hi,  4.5 si,  0.0 st 
+top - 02:13:42 up  1:06,  1 user,  load average: 1.46, 0.51, 0.23
+Tasks: 118 total,   1 running, 117 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 91.3 us,  4.3 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  4.3 si,  0.0 st 
+MiB Mem :   3790.2 total,    118.5 free,   2540.9 used,   1390.5 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1249.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   2866 isucon    20   0 3738372   2.3g 316124 S 190.0  61.7   1:12.96 isureal
+      1 root      20   0   22636  13924   9564 S   0.0   0.4   0:03.82 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+922
+20

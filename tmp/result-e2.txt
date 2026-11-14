@@ -1,0 +1,70 @@
+Score: 484907
+
+Score Breakdown: base=484907, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T02:34:06.844Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:34:09.845Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:34:12.844Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:34:15.844Z level=INFO msg="asia 2 日目: 50 人"
+time=2026-10-31T02:34:18.845Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T02:34:21.843Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T02:34:24.845Z level=INFO msg="asia 3 日目: 146 人"
+time=2026-10-31T02:34:27.844Z level=INFO msg="europe 3 日目: 63 人"
+time=2026-10-31T02:34:30.843Z level=INFO msg="america 3 日目: 54 人"
+time=2026-10-31T02:34:31.771Z level=INFO msg="user moved" user=isyo.6515 from=america to=europe
+time=2026-10-31T02:34:33.847Z level=INFO msg="asia 4 日目: 430 人"
+time=2026-10-31T02:34:34.246Z level=INFO msg="user moved" user=mihowa6686 from=america to=europe
+time=2026-10-31T02:34:36.132Z level=INFO msg="user moved" user=reyu6946 from=asia to=america
+time=2026-10-31T02:34:36.734Z level=INFO msg="user moved" user=reyu6946 from=america to=europe
+time=2026-10-31T02:34:36.953Z level=INFO msg="europe 4 日目: 190 人"
+time=2026-10-31T02:34:37.588Z level=INFO msg="user moved" user=evaleo_7949 from=asia to=europe
+time=2026-10-31T02:34:38.038Z level=INFO msg="user moved" user=mihowa6686 from=europe to=asia
+time=2026-10-31T02:34:38.953Z level=INFO msg="user moved" user=fulia_7388 from=asia to=america
+time=2026-10-31T02:34:38.980Z level=INFO msg="user moved" user=isyo.6515 from=europe to=asia
+time=2026-10-31T02:34:39.025Z level=INFO msg="user moved" user=bentorna.8163 from=asia to=europe
+time=2026-10-31T02:34:39.397Z level=INFO msg="user moved" user=leota8983 from=europe to=america
+time=2026-10-31T02:34:39.865Z level=INFO msg="america 4 日目: 162 人"
+time=2026-10-31T02:34:40.123Z level=INFO msg="user moved" user=mekiya9173 from=europe to=asia
+time=2026-10-31T02:34:41.806Z level=INFO msg="user moved" user=rese9716 from=america to=europe
+time=2026-10-31T02:34:42.790Z level=INFO msg="user moved" user=sotor_9968 from=america to=asia
+time=2026-10-31T02:34:42.850Z level=INFO msg="asia 5 日目: 1265 人"
+time=2026-10-31T02:34:43.159Z level=INFO msg="user moved" user=toleome.9928 from=america to=europe
+time=2026-10-31T02:34:46.086Z level=INFO msg="europe 5 日目: 557 人"
+time=2026-10-31T02:34:48.939Z level=INFO msg="america 5 日目: 465 人"
+time=2026-10-31T02:34:57.913Z level=INFO msg="europe 最終日（グランプリ）: 556 人"
+time=2026-10-31T02:34:57.922Z level=INFO msg="america 最終日（グランプリ）: 464 人"
+time=2026-10-31T02:34:57.927Z level=INFO msg="asia 最終日（グランプリ）: 1264 人"
+time=2026-10-31T02:35:06.922Z level=INFO msg="グランプリ: アジア 843 人, ヨーロッパ 406 人, アメリカ 364 人"
+{
+  "pass": true,
+  "score": 484907,
+  "messages": [
+    "yaleo-15940: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "charcoal_mini_turkey_2371: ログアウトできません: POST /api/auth/logout: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/logout\": EOF",
+    "sael.16993: プロフィールを変えられません: PATCH /api/me: 通信に失敗しました: Patch \"http://ROUTER_HOST:8080/api/me\": EOF",
+    "heronu_15162: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "bensu14551: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "hikozoe13379: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "zoenume-12222: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "maxha14380: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "elneshi-15147: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "tetamar_12618: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "liashi14357: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "tonu12137: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "zoemo17075: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sator_12708: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kiha_16337: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kiorse_16978: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "maxhe_12686: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "mofu_9018: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "leoyora.15286: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "senaben.15195: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）"
+  ]
+}
+
+Re-Enqueue

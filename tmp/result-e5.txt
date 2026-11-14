@@ -1,0 +1,59 @@
+Score: 511189
+
+Score Breakdown: base=511189, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T02:41:50.806Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:41:53.808Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:41:56.805Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:41:59.806Z level=INFO msg="asia 2 日目: 18 人"
+time=2026-10-31T02:42:02.807Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T02:42:05.806Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T02:42:07.563Z level=INFO msg="user moved" user=tanemax_5226 from=america to=europe
+time=2026-10-31T02:42:08.808Z level=INFO msg="asia 3 日目: 18 人"
+time=2026-10-31T02:42:11.806Z level=INFO msg="europe 3 日目: 56 人"
+time=2026-10-31T02:42:13.116Z level=INFO msg="user moved" user=tanemax_5226 from=europe to=asia
+time=2026-10-31T02:42:14.809Z level=INFO msg="america 3 日目: 53 人"
+time=2026-10-31T02:42:15.084Z level=INFO msg="user moved" user=kiha5448 from=europe to=asia
+time=2026-10-31T02:42:16.813Z level=INFO msg="user moved" user=keshi_5619 from=america to=asia
+time=2026-10-31T02:42:17.808Z level=INFO msg="asia 4 日目: 21 人"
+time=2026-10-31T02:42:18.766Z level=INFO msg="user moved" user=natsusa5797 from=america to=europe
+time=2026-10-31T02:42:20.581Z level=INFO msg="user moved" user=keshi_5619 from=asia to=america
+time=2026-10-31T02:42:20.806Z level=INFO msg="europe 4 日目: 165 人"
+time=2026-10-31T02:42:21.054Z level=INFO msg="user moved" user=kiha5448 from=asia to=europe
+time=2026-10-31T02:42:21.137Z level=INFO msg="user moved" user=tanemax_5226 from=asia to=europe
+time=2026-10-31T02:42:23.094Z level=INFO msg="user moved" user=natsusa5797 from=europe to=asia
+time=2026-10-31T02:42:23.809Z level=INFO msg="america 4 日目: 152 人"
+time=2026-10-31T02:42:24.306Z level=INFO msg="user moved" user=nuliami_6245 from=europe to=asia
+time=2026-10-31T02:42:24.900Z level=INFO msg="user moved" user=setor_6235 from=europe to=america
+time=2026-10-31T02:42:25.259Z level=INFO msg="user moved" user=vinvinyu6732 from=america to=europe
+time=2026-10-31T02:42:25.895Z level=INFO msg="user moved" user=fume.6305 from=europe to=asia
+time=2026-10-31T02:42:26.811Z level=INFO msg="asia 5 日目: 21 人"
+time=2026-10-31T02:42:29.818Z level=INFO msg="europe 5 日目: 490 人"
+time=2026-10-31T02:42:32.836Z level=INFO msg="america 5 日目: 445 人"
+time=2026-10-31T02:42:41.823Z level=INFO msg="europe 最終日（グランプリ）: 489 人"
+time=2026-10-31T02:42:41.838Z level=INFO msg="asia 最終日（グランプリ）: 20 人"
+time=2026-10-31T02:42:41.853Z level=INFO msg="america 最終日（グランプリ）: 444 人"
+time=2026-10-31T02:42:50.792Z level=INFO msg="グランプリ: アジア 20 人, ヨーロッパ 485 人, アメリカ 442 人"
+{
+  "pass": true,
+  "score": 511189,
+  "messages": [
+    "reke_6596: 投稿 34ea63f0-2b96-435a-add8-9e6fbdd98556 の画像を取得できません: GET /api/images/4acd7c67-90df-4cf5-b78a-4b0e86c96d99?exp=1793498400\u0026sig=K8aGu4XY5eREM9WzBf87RrI6VXN1CgCK0KujuX53MRg: ステータスコード 502 が返りました（期待値 200、unknown）",
+    "wanuso.6620: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kikoshi_7753: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "chior-7933: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "seso-10129: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "maxma_5539: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "kuchi-6206: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "ulya8015: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "dreifach_forschungsclub_709: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "zoenoa_5197: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+
+Re-Enqueue

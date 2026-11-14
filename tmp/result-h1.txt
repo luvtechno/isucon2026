@@ -1,0 +1,54 @@
+Score: 0
+
+Score Breakdown: base=0, deduction=0
+
+Conclusion
+
+Reason: 負荷走行を打ち切りました
+
+Stdout
+time=2026-10-31T05:30:24.084Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T05:30:27.086Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T05:30:28.375Z level=INFO msg="user moved" user=yuhe5087 from=europe to=america
+time=2026-10-31T05:30:30.084Z level=INFO msg="america 1 日目: 7 人"
+time=2026-10-31T05:30:33.084Z level=INFO msg="asia 2 日目: 52 人"
+time=2026-10-31T05:30:36.086Z level=INFO msg="europe 2 日目: 20 人"
+time=2026-10-31T05:30:39.086Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T05:30:40.380Z level=INFO msg="user moved" user=yuhe5087 from=america to=europe
+time=2026-10-31T05:30:42.087Z level=INFO msg="asia 3 日目: 154 人"
+time=2026-10-31T05:30:45.092Z level=INFO msg="europe 3 日目: 61 人"
+time=2026-10-31T05:30:46.073Z level=INFO msg="user moved" user=yunimia-5735 from=asia to=europe
+time=2026-10-31T05:30:46.773Z level=INFO msg="user moved" user=yuhe5087 from=europe to=america
+time=2026-10-31T05:30:47.184Z level=INFO msg="user moved" user=benni_6076 from=asia to=europe
+time=2026-10-31T05:30:48.085Z level=INFO msg="america 3 日目: 54 人"
+time=2026-10-31T05:30:48.370Z level=INFO msg="user moved" user=seisul_6263 from=asia to=europe
+time=2026-10-31T05:30:49.036Z level=INFO msg="グランプリ: アジア 0 人, ヨーロッパ 0 人, アメリカ 0 人"
+{
+  "pass": false,
+  "score": 0,
+  "messages": [
+    "負荷走行を打ち切りました: 20s〜25s のエラー率 15.4%（4181/27074 件）が上限 10.0% を超えました",
+    "hupo_shuizuguan_1269: 履歴を読めません: GET /api/images/0faffbb1-73da-4604-a59a-97b0c2a046dd?exp=1793428243\u0026sig=IXgymR7aA7Re7p935srE1roo9zgFzsgweLkMvYEiy3g: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "teuripeul_yeongu_3290: 履歴を読めません: GET /api/images/6da5ac26-a4a0-4c3d-86b3-a4249001f216?exp=1793498400\u0026sig=Vg8l3bxHjUtep0Sdj2JcNNvLAzUBxWrxAPuiWNA8TVs: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "tsukiyo_uzura_848: 履歴を読めません: GET /api/images/0ff85b94-f92e-4e94-8cdf-7514d7d2332b?exp=1793428243\u0026sig=TxvR1oEWZPOKDgLX28F5LthBFNbVwZxyM0itmRRbARw: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "jihun_park_4581: 履歴を読めません: GET /api/images/2e307e51-c198-40d6-86db-53007ec0f35d?exp=1793498400\u0026sig=vGPWVTH3hF55t0wvjy3ZsiT31nhC8dDJNZpV8vV9Amo: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "wei_wang_4603: 履歴を読めません: GET /api/images/89e5d868-ac99-4ab8-8909-47ac9ffdc6f4?exp=1793498400\u0026sig=C9ovNSlBPqiQsCpbXuacSlh6d2L5gDDKjblxpMjZPTM: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "qiaomai_liuchang_rust_377: 履歴を読めません: GET /api/images/706ea04e-2c58-4897-96aa-52751182abe7?exp=1793428243\u0026sig=8p863-k8pPMh1aZIZHQINlXOPWPkiLDXFeR8s_FwYPo: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "doyun_cho_721: 履歴を読めません: GET /api/images/657146b6-0c99-4d4d-84b6-d8d014c2485f?exp=1793428243\u0026sig=_0I7dNfV5o4JznynpSbWq0QgY2sju5YG1F96QYovsfo: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "sardinhas_na_panela_de_barro_3911: 履歴を読めません: GET /api/images/7781b9f6-684b-40ea-8509-841e5d8893cf?exp=1793498400\u0026sig=JASFYAi7IOvPfX7Fp0vexH3-ts6f3GtaCSAZA4u1tGo: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "sardinas_en_olla_de_barro_4671: 履歴を読めません: GET /api/images/f66769ac-9b8b-4646-a0a0-3290a4d9cc96?exp=1793428243\u0026sig=i1nD8n1zE708uIzr5PK_Po9oJW6YPMZcDNNmc5Cp9I8: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "capybaras_en_promenade_4662: 履歴を読めません: GET /api/images/2a70f9e7-190b-4c0d-b8e6-d949d079340d?exp=1793498400\u0026sig=gZrFuE_CAZG9BA0yYCMqXk3STdHIirwV46gECn8hLMY: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "sophie_evans_996: 履歴を読めません: GET /api/images/a49a17da-f82e-4288-8ee6-deaa0027520b?exp=1793498400\u0026sig=8DoLil9nkwlTw0q7TQuWo5JjmrstR-6qtbqGpUuI0c4: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "santiago_lopez_1729: 履歴を読めません: GET /api/images/6ad5cb62-25a5-43c2-9b7f-66744fcaa320?exp=1793498400\u0026sig=kNpFB6zu5IrGo97tXGtI4KApn8YURmal60cqBWyIr68: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "sebastian_ramirez_219: 履歴を読めません: GET /api/images/be32438b-815f-4c2c-9ad4-ce5023e152fa?exp=1793498400\u0026sig=9lghTa6Ei9TfH_zFgwHRAt5ylInELHs3_AQUxINPyV8: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "club_de_recherche_triple_4141: 履歴を読めません: GET /api/images/9454627a-5202-4626-9080-3b0dd279c772?exp=1793498400\u0026sig=O7dLzQFuCYilNcl1xUF6ZNPsveo76Ym4CDxrySQGBTI: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "powered_by_a_snack_budget_2988: 履歴を読めません: GET /api/images/e63b08a5-b220-4814-9def-f1f8f06043ae?exp=1793498400\u0026sig=K4A77Zx4une42QLdnkLUDZs58vDDEC0jWplti2hmg-U: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "valentina_martinez_2562: 履歴を読めません: GET /api/images/81578b3e-0cae-4c46-b6c7-21eb6e821fe2?exp=1793498400\u0026sig=msSf_qpJNyi_yAmItND9sTeVLJoovUgWox8H0ZFYa4k: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "lukas_muller_4048: 履歴を読めません: GET /api/images/3686d5a4-4be1-422b-8f57-04a63f9033f9?exp=1793498400\u0026sig=yorJi5ULKLu9zm4evAvzDxiobK9BWMc3Hb-5I3GvSPg: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "santiago_lopez_1729: 履歴を読めません: GET /api/images/c87582eb-196b-47e0-87bf-7fb2f41f90ac?exp=1793498400\u0026sig=5fB1sbgzO6U4GWI9x71F6sje4gZbmhesvIUF2-gt8bY: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "elias_hoffmann_8: 履歴を読めません: GET /api/images/669c9488-9032-4482-a2f6-551fde784bb5?exp=1793498400\u0026sig=Reg8qG6_VMHM4uqUd-TOjMUqhj_jN7ynm6yIbxdhkrM: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "gabriel_dubois_2059: 履歴を読めません: GET /api/images/84ff61e9-0341-4f75-be04-1db9358f8f67?exp=1793498400\u0026sig=z-aKKCKvs71i8txHCTyf-KLGPMeOqleFmHpHxIft2SI: ステータスコード 500 が返りました（期待値 200、image_unavailable）"
+  ]
+}
+
+Re-Enqueue

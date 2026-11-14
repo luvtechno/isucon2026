@@ -1,0 +1,33 @@
+Score: 523954
+Reason: 実行終了
+Stdout
+time=2026-10-31T03:48:18.144Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T03:48:21.147Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T03:48:24.143Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T03:48:27.143Z level=INFO msg="asia 2 日目: 48 人"
+time=2026-10-31T03:48:30.146Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T03:48:33.146Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T03:48:36.146Z level=INFO msg="asia 3 日目: 138 人"
+time=2026-10-31T03:48:39.147Z level=INFO msg="europe 3 日目: 63 人"
+time=2026-10-31T03:48:42.146Z level=INFO msg="america 3 日目: 54 人"
+time=2026-10-31T03:48:45.153Z level=INFO msg="asia 4 日目: 238 人"
+time=2026-10-31T03:48:48.148Z level=INFO msg="europe 4 日目: 186 人"
+time=2026-10-31T03:48:51.168Z level=INFO msg="america 4 日目: 159 人"
+time=2026-10-31T03:48:54.155Z level=INFO msg="asia 5 日目: 335 人"
+time=2026-10-31T03:48:57.147Z level=INFO msg="europe 5 日目: 542 人"
+time=2026-10-31T03:49:00.243Z level=INFO msg="america 5 日目: 469 人"
+time=2026-10-31T03:49:09.144Z level=INFO msg="asia 最終日（グランプリ）: 335 人"
+time=2026-10-31T03:49:09.151Z level=INFO msg="europe 最終日（グランプリ）: 541 人"
+time=2026-10-31T03:49:09.153Z level=INFO msg="america 最終日（グランプリ）: 468 人"
+time=2026-10-31T03:49:18.161Z level=INFO msg="グランプリ: アジア 235 人, ヨーロッパ 539 人, アメリカ 466 人"
+{
+  "pass": true,
+  "score": 523954,
+  "messages": [
+    "ivykire.10943: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "hehotsu8921: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "oryo9892: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "hikose.11970: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "sebenru.12862: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}

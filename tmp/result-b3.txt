@@ -1,0 +1,22 @@
+Score: 0
+
+Score Breakdown: base=0, deduction=0
+
+Conclusion
+
+Reason: 初期データの検証に失敗しました
+
+Stdout
+{
+  "pass": false,
+  "score": 0,
+  "messages": [
+    "初期データの検証に失敗しました: 初期データのユーザー panya_shugyo_386: Memories（2026-07）: 画像 URL \"/api/images/b819aca4-49bb-4a5a-a6da-31f2bce55386?exp=1793498161\u0026sig=x_bQwLzKNSLiDBtCUISoKCDnaJhSNw0InqtCeMoFNj8\" の署名が画像の持ち主の鍵と一致しません",
+    "初期データのユーザー sakura_takahashi_3436: Memories（2026-04）: 画像 URL \"/api/images/b91a4dde-3f5c-441c-9ab5-80f5e089dd45?exp=1793498161\u0026sig=CCS_97mfWHREHT0KpYYVtlu_uopvy_eGAY4G5lWHg2Y\" の署名が画像の持ち主の鍵と一致しません",
+    "初期データのユーザー jules_petit_2399: Memories（2026-08）: 画像 URL \"/api/images/9934549c-571f-4f82-abe7-0caaf55739cb?exp=1793498161\u0026sig=SbXhv8JNLp4q-jJ5XhhMUna6S3_z6n39XFhB6Q2BRhA\" の署名が画像の持ち主の鍵と一致しません",
+    "初期データのユーザー harper_harris_2356: Memories（2026-09）: 画像 URL \"/api/images/a84d301d-f46f-4988-bcd4-bd6e386fd891?exp=1793498161\u0026sig=KTyafGlnTxN1oTKXStOp9rlhL-lMpvWHuxtmEx27DAI\" の署名が画像の持ち主の鍵と一致しません",
+    "初期データのユーザー doyun_cho_0: Memories（2026-04）: 画像 URL \"/api/images/e9e4361b-2f48-45c9-92b6-b8ca75091a11?exp=1793498161\u0026sig=tMvnCqy5e59IxuEHpN1OWVkK1rHTxI6nffcNgsmNhMk\" の署名が画像の持ち主の鍵と一致しません"
+  ]
+}
+
+Re-Enqueue

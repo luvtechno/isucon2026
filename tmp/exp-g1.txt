@@ -1,0 +1,64 @@
+Score: 558433
+Reason: 実行終了
+Stdout
+time=2026-10-31T03:00:06.323Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T03:00:09.324Z level=INFO msg="europe 1 日目: 8 人"
+time=2026-10-31T03:00:12.324Z level=INFO msg="america 1 日目: 7 人"
+time=2026-10-31T03:00:15.324Z level=INFO msg="asia 2 日目: 47 人"
+time=2026-10-31T03:00:18.340Z level=INFO msg="europe 2 日目: 20 人"
+time=2026-10-31T03:00:21.325Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T03:00:24.399Z level=INFO msg="asia 3 日目: 137 人"
+time=2026-10-31T03:00:27.362Z level=INFO msg="europe 3 日目: 59 人"
+time=2026-10-31T03:00:30.330Z level=INFO msg="america 3 日目: 53 人"
+time=2026-10-31T03:00:33.325Z level=INFO msg="asia 4 日目: 373 人"
+time=2026-10-31T03:00:36.372Z level=INFO msg="europe 4 日目: 178 人"
+time=2026-10-31T03:00:39.415Z level=INFO msg="america 4 日目: 167 人"
+time=2026-10-31T03:00:42.622Z level=INFO msg="asia 5 日目: 905 人"
+time=2026-10-31T03:00:45.475Z level=INFO msg="europe 5 日目: 530 人"
+time=2026-10-31T03:00:48.571Z level=INFO msg="america 5 日目: 494 人"
+time=2026-10-31T03:00:57.436Z level=INFO msg="america 最終日（グランプリ）: 493 人"
+time=2026-10-31T03:00:57.477Z level=INFO msg="europe 最終日（グランプリ）: 529 人"
+time=2026-10-31T03:00:57.512Z level=INFO msg="asia 最終日（グランプリ）: 904 人"
+time=2026-10-31T03:01:06.324Z level=INFO msg="グランプリ: アジア 594 人, ヨーロッパ 506 人, アメリカ 481 人"
+{
+  "pass": true,
+  "score": 558433,
+  "messages": [
+    "nomore5959: 削除されていない投稿 0b3f58b6-bee3-4245-85cc-843e423d8024 の画像が拒否されました",
+    "subin_yun_2673: 履歴を読めません: GET /api/memories?month=2026-05: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "solnoata.9904: 友達申請を送れません: POST /api/friend-requests: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/friend-requests\": EOF",
+    "tororta-14172: プロフィール画像を取得できません: GET /api/images/e6f0d27a-6874-4c02-93ef-1df87b193d19?exp=1793498400\u0026sig=VEkEbRSy3qhAeGbp-M6o5P0wLVn7AvG3k9kokAHcL6M: ステータスコード 403 が返りました（期待値 200、image_forbid
+    "chisolel12547: プロフィール画像を取得できません: GET /api/images/a64ac228-4897-4338-ad99-5eb66541de42?exp=1793498400\u0026sig=5Owg9VUEg1esDDsoAEEckYrrr-jZ3fAOkR6TF-W5hxY: ステータスコード 403 が返りました（期待値 200、image_forbid
+    "hiis.12656: プロフィール画像を取得できません: GET /api/images/1f1713fd-b49d-4822-9ae2-769cfb68190e?exp=1793498400\u0026sig=IikwRqeH2gQYsazqG-onNaR1L5bpLAsdBbhBBhbG5Js: ステータスコード 403 が返りました（期待値 200、image_forbidden
+    "yuni-14011: プロフィール画像を取得できません: GET /api/images/a8a64e5c-bcdf-45cd-84a6-09220f61ca38?exp=1793498400\u0026sig=UAB1ByVtZKLtbmCfyS5ItJgNsWy1lV_HhM9KlaP49p4: ステータスコード 403 が返りました（期待値 200、image_forbidden
+    "kumo.10355: 削除されていない投稿 6572e5d1-c296-4a88-96b5-3004b8061fec の画像が拒否されました",
+    "isben11559: 削除されていない投稿 2dd90e40-2228-4d83-900f-7b9f6483f213 の画像が拒否されました",
+    "saivymu-10889: 削除されていない投稿 c5a2a4a9-fd87-4c83-b38f-6ee6ce32660b の画像が拒否されました",
+    "dannere-9921: 削除されていない投稿 69340101-cf10-445e-bd18-9d2e61b494fc の画像が拒否されました",
+    "rerumu_12659: 削除されていない投稿 3839a205-a904-4806-ac88-6e4dd2cfc2fc の画像が拒否されました",
+    "nemia-12876: 削除されていない投稿 00a0dc2d-a33a-4228-8903-fdee4e79afed の画像が拒否されました",
+    "torke13699: 削除されていない投稿 32c50be1-3fd4-4021-94d6-0d4c2e43a7eb の画像が拒否されました",
+    "beneva-13363: 削除されていない投稿 3aba9ce5-632a-4803-ad53-6ad6a6267cae の画像が拒否されました",
+    "tewamu.13313: 削除されていない投稿 01d5a594-2374-4698-8c18-556ef5ab741d の画像が拒否されました",
+    "rosanoa_12930: 削除されていない投稿 9007c793-260b-4bb6-9d03-136bc341e7bb の画像が拒否されました",
+    "hamero14136: 削除されていない投稿 89f4a4e6-2e17-49b8-a3a4-9d655b8f2006 の画像が拒否されました",
+    "netorru.12868: 削除されていない投稿 2d239cce-2f39-4b24-b691-dc8eadc5bcfe の画像が拒否されました",
+    "anhian11172: 削除されていない投稿 2576c430-b164-41e8-b21c-975d6912f794 の画像が拒否されました"
+  ]
+}
+Oct 31 03:01:19 ip-192-168-4-10 isureal[5879]: {"time":"2026-10-31T03:01:19.276777483Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.4.10:8080->192.168.1.10:37066: read: connection
+Oct 31 03:01:20 ip-192-168-4-10 isureal[5879]: {"time":"2026-10-31T03:01:20.812698442Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.4.10:8080->192.168.1.10:46634: read: connection
+Oct 31 03:01:20 ip-192-168-4-10 isureal[5879]: {"time":"2026-10-31T03:01:20.812803881Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.4.10:8080->192.168.1.10:37234: read: connection
+Oct 31 03:01:20 ip-192-168-4-10 isureal[5879]: {"time":"2026-10-31T03:01:20.81285993Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.4.10:8080->192.168.1.10:61108: read: connection 
+Oct 31 03:01:06 ip-192-168-1-10 isureal[5505]: {"time":"2026-10-31T03:01:06.29104139Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:60956: read: connection r
+Oct 31 03:01:06 ip-192-168-1-10 isureal[5505]: {"time":"2026-10-31T03:01:06.299783069Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:40570: read: connection 
+Oct 31 03:01:06 ip-192-168-1-10 isureal[5505]: {"time":"2026-10-31T03:01:06.300241414Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:63068: read: connection 
+Oct 31 03:01:06 ip-192-168-1-10 isureal[5505]: {"time":"2026-10-31T03:01:06.313629699Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:44388: read: connection 
+Oct 31 03:01:06 ip-192-168-2-10 isureal[3383]: {"time":"2026-10-31T03:01:06.308422405Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:33540: read: connection 
+Oct 31 03:01:06 ip-192-168-2-10 isureal[3383]: {"time":"2026-10-31T03:01:06.31152009Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:50144: read: connection r
+Oct 31 03:01:06 ip-192-168-2-10 isureal[3383]: {"time":"2026-10-31T03:01:06.311572095Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:51342: read: connection 
+Oct 31 03:01:06 ip-192-168-2-10 isureal[3383]: {"time":"2026-10-31T03:01:06.313708275Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:37520: read: connection 
+Oct 31 03:01:06 ip-192-168-3-10 isureal[3336]: {"time":"2026-10-31T03:01:06.304792854Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.3.10:80->192.168.10.10:13674: read: connection 
+Oct 31 03:01:06 ip-192-168-3-10 isureal[3336]: {"time":"2026-10-31T03:01:06.306131669Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.3.10:80->192.168.10.10:30972: read: connection 
+Oct 31 03:01:06 ip-192-168-3-10 isureal[3336]: {"time":"2026-10-31T03:01:06.308445213Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.3.10:80->192.168.10.10:32494: read: connection 
+Oct 31 03:01:06 ip-192-168-3-10 isureal[3336]: {"time":"2026-10-31T03:01:06.313861721Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.3.10:80->192.168.10.10:28904: read: connection 

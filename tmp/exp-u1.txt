@@ -1,0 +1,29 @@
+Score: 525037
+Reason: 実行終了
+Stdout
+time=2026-10-31T04:11:57.560Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T04:12:00.561Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T04:12:03.560Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T04:12:06.560Z level=INFO msg="asia 2 日目: 54 人"
+time=2026-10-31T04:12:09.562Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T04:12:12.562Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T04:12:15.565Z level=INFO msg="asia 3 日目: 155 人"
+time=2026-10-31T04:12:18.560Z level=INFO msg="europe 3 日目: 56 人"
+time=2026-10-31T04:12:21.562Z level=INFO msg="america 3 日目: 58 人"
+time=2026-10-31T04:12:24.561Z level=INFO msg="asia 4 日目: 256 人"
+time=2026-10-31T04:12:27.566Z level=INFO msg="europe 4 日目: 163 人"
+time=2026-10-31T04:12:30.568Z level=INFO msg="america 4 日目: 164 人"
+time=2026-10-31T04:12:33.574Z level=INFO msg="asia 5 日目: 337 人"
+time=2026-10-31T04:12:36.564Z level=INFO msg="europe 5 日目: 474 人"
+time=2026-10-31T04:12:39.587Z level=INFO msg="america 5 日目: 467 人"
+time=2026-10-31T04:12:48.560Z level=INFO msg="america 最終日（グランプリ）: 466 人"
+time=2026-10-31T04:12:48.567Z level=INFO msg="europe 最終日（グランプリ）: 473 人"
+time=2026-10-31T04:12:48.567Z level=INFO msg="asia 最終日（グランプリ）: 337 人"
+time=2026-10-31T04:12:57.569Z level=INFO msg="グランプリ: アジア 329 人, ヨーロッパ 473 人, アメリカ 466 人"
+{
+  "pass": true,
+  "score": 525037,
+  "messages": [
+    "nuelru_10162: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）"
+  ]
+}

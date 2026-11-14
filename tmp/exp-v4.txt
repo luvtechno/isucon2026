@@ -1,0 +1,27 @@
+Score: 541028
+Reason: 実行終了
+Stdout
+time=2026-10-31T04:36:02.800Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T04:36:05.801Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T04:36:08.799Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T04:36:11.799Z level=INFO msg="asia 2 日目: 52 人"
+time=2026-10-31T04:36:14.800Z level=INFO msg="europe 2 日目: 17 人"
+time=2026-10-31T04:36:17.800Z level=INFO msg="america 2 日目: 16 人"
+time=2026-10-31T04:36:20.802Z level=INFO msg="asia 3 日目: 154 人"
+time=2026-10-31T04:36:23.802Z level=INFO msg="europe 3 日目: 47 人"
+time=2026-10-31T04:36:26.801Z level=INFO msg="america 3 日目: 47 人"
+time=2026-10-31T04:36:29.803Z level=INFO msg="asia 4 日目: 244 人"
+time=2026-10-31T04:36:32.799Z level=INFO msg="europe 4 日目: 139 人"
+time=2026-10-31T04:36:35.801Z level=INFO msg="america 4 日目: 136 人"
+time=2026-10-31T04:36:38.807Z level=INFO msg="asia 5 日目: 332 人"
+time=2026-10-31T04:36:41.802Z level=INFO msg="europe 5 日目: 401 人"
+time=2026-10-31T04:36:44.808Z level=INFO msg="america 5 日目: 394 人"
+time=2026-10-31T04:36:53.809Z level=INFO msg="asia 最終日（グランプリ）: 331 人"
+time=2026-10-31T04:36:53.814Z level=INFO msg="america 最終日（グランプリ）: 393 人"
+time=2026-10-31T04:36:53.844Z level=INFO msg="europe 最終日（グランプリ）: 401 人"
+time=2026-10-31T04:37:02.793Z level=INFO msg="グランプリ: アジア 328 人, ヨーロッパ 401 人, アメリカ 393 人"
+{
+  "pass": true,
+  "score": 541028,
+  "messages": []
+}

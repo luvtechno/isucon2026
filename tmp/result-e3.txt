@@ -1,0 +1,75 @@
+Score: 432107
+
+Score Breakdown: base=432107, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T02:37:10.626Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:37:13.628Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:37:16.626Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:37:19.626Z level=INFO msg="asia 2 日目: 50 人"
+time=2026-10-31T02:37:22.628Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T02:37:25.625Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T02:37:28.627Z level=INFO msg="asia 3 日目: 146 人"
+time=2026-10-31T02:37:30.982Z level=INFO msg="user moved" user=rovin.5888 from=asia to=europe
+time=2026-10-31T02:37:31.593Z level=INFO msg="user moved" user=rovin.5888 from=europe to=asia
+time=2026-10-31T02:37:31.627Z level=INFO msg="europe 3 日目: 57 人"
+time=2026-10-31T02:37:34.218Z level=INFO msg="user moved" user=tewano_6330 from=europe to=asia
+time=2026-10-31T02:37:34.627Z level=INFO msg="america 3 日目: 54 人"
+time=2026-10-31T02:37:37.628Z level=INFO msg="asia 4 日目: 429 人"
+time=2026-10-31T02:37:39.626Z level=INFO msg="user moved" user=tewano_6330 from=asia to=europe
+time=2026-10-31T02:37:40.590Z level=INFO msg="user moved" user=mueva_7712 from=asia to=america
+time=2026-10-31T02:37:40.632Z level=INFO msg="europe 4 日目: 169 人"
+time=2026-10-31T02:37:40.849Z level=INFO msg="user moved" user=mueva_7712 from=america to=europe
+time=2026-10-31T02:37:41.121Z level=INFO msg="user moved" user=nuya_7930 from=asia to=america
+time=2026-10-31T02:37:41.779Z level=INFO msg="user moved" user=ulmate-8496 from=asia to=america
+time=2026-10-31T02:37:42.077Z level=INFO msg="user moved" user=neyoto.8558 from=asia to=america
+time=2026-10-31T02:37:42.406Z level=INFO msg="user moved" user=ulmate-8496 from=america to=europe
+time=2026-10-31T02:37:42.482Z level=INFO msg="user moved" user=nuya_7930 from=america to=europe
+time=2026-10-31T02:37:42.610Z level=INFO msg="user moved" user=ulyaivy.8656 from=asia to=europe
+time=2026-10-31T02:37:42.684Z level=INFO msg="user moved" user=ulzoechi-9001 from=europe to=america
+time=2026-10-31T02:37:42.955Z level=INFO msg="user moved" user=ulzoechi-9001 from=america to=europe
+time=2026-10-31T02:37:43.055Z level=INFO msg="user moved" user=nusa8850 from=europe to=asia
+time=2026-10-31T02:37:43.453Z level=INFO msg="user moved" user=neyoto.8558 from=america to=europe
+time=2026-10-31T02:37:43.630Z level=INFO msg="america 4 日目: 172 人"
+time=2026-10-31T02:37:45.452Z level=INFO msg="user moved" user=sutorki.9229 from=europe to=asia
+time=2026-10-31T02:37:46.258Z level=INFO msg="user moved" user=kenune-9758 from=america to=asia
+time=2026-10-31T02:37:46.628Z level=INFO msg="asia 5 日目: 1258 人"
+time=2026-10-31T02:37:47.042Z level=INFO msg="user moved" user=sureis10046 from=america to=asia
+time=2026-10-31T02:37:49.951Z level=INFO msg="europe 5 日目: 505 人"
+time=2026-10-31T02:37:52.710Z level=INFO msg="america 5 日目: 510 人"
+time=2026-10-31T02:38:01.912Z level=INFO msg="europe 最終日（グランプリ）: 504 人"
+time=2026-10-31T02:38:01.914Z level=INFO msg="asia 最終日（グランプリ）: 1259 人"
+time=2026-10-31T02:38:01.915Z level=INFO msg="america 最終日（グランプリ）: 510 人"
+time=2026-10-31T02:38:10.729Z level=INFO msg="グランプリ: アジア 745 人, ヨーロッパ 351 人, アメリカ 397 人"
+{
+  "pass": true,
+  "score": 432107,
+  "messages": [
+    "benisra15165: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "yuevazoe_16398: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "hiis.15292: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sose_15433: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "teyo-13539: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kina_13779: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "mataro_13531: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "mamia-15007: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "fuben-17911: プロフィール画像を変えられません: PUT /api/me/profile-image: 通信に失敗しました: Put \"http://ROUTER_HOST:8080/api/me/profile-image\": EOF",
+    "miaan6529: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "noakima-14908: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sushi_on_a_sunflower_4749: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "miano-18117: プロフィール画像を変えられません: PUT /api/me/profile-image: 通信に失敗しました: Put \"http://ROUTER_HOST:8080/api/me/profile-image\": EOF",
+    "danhe13743: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "kasa14493: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "miwa-9707: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "rivin-12525: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sunaan-9962: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "yonu.15319: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "liamar_8353: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": readfrom tcp 10.27.33.198:38720-\u003eROUTER_HOST:8080: write tcp 10.27.33.198:38720-\u003eROUTER_HOST:8080: use of closed network connection"
+  ]
+}
+
+Re-Enqueue

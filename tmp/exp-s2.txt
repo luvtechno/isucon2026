@@ -1,0 +1,30 @@
+Score: 578762
+Reason: 実行終了
+Stdout
+time=2026-10-31T03:59:15.466Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T03:59:18.467Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T03:59:21.466Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T03:59:24.465Z level=INFO msg="asia 2 日目: 44 人"
+time=2026-10-31T03:59:27.467Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T03:59:30.466Z level=INFO msg="america 2 日目: 16 人"
+time=2026-10-31T03:59:33.468Z level=INFO msg="asia 3 日目: 122 人"
+time=2026-10-31T03:59:36.466Z level=INFO msg="europe 3 日目: 63 人"
+time=2026-10-31T03:59:39.466Z level=INFO msg="america 3 日目: 46 人"
+time=2026-10-31T03:59:42.468Z level=INFO msg="asia 4 日目: 224 人"
+time=2026-10-31T03:59:45.469Z level=INFO msg="europe 4 日目: 189 人"
+time=2026-10-31T03:59:48.472Z level=INFO msg="america 4 日目: 136 人"
+time=2026-10-31T03:59:51.470Z level=INFO msg="asia 5 日目: 322 人"
+time=2026-10-31T03:59:54.475Z level=INFO msg="europe 5 日目: 552 人"
+time=2026-10-31T03:59:57.476Z level=INFO msg="america 5 日目: 396 人"
+time=2026-10-31T04:00:06.469Z level=INFO msg="america 最終日（グランプリ）: 395 人"
+time=2026-10-31T04:00:06.470Z level=INFO msg="europe 最終日（グランプリ）: 551 人"
+time=2026-10-31T04:00:06.474Z level=INFO msg="asia 最終日（グランプリ）: 322 人"
+time=2026-10-31T04:00:15.457Z level=INFO msg="グランプリ: アジア 321 人, ヨーロッパ 550 人, アメリカ 394 人"
+{
+  "pass": true,
+  "score": 578762,
+  "messages": [
+    "vinkiro13298: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "marel.12940: 友達申請を送れません: POST /api/friend-requests: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/friend-requests\": EOF"
+  ]
+}

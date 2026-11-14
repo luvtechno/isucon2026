@@ -1,0 +1,31 @@
+Score: 573278
+Reason: 実行終了
+Stdout
+time=2026-10-31T06:26:31.492Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T06:26:34.494Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T06:26:37.492Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T06:26:40.493Z level=INFO msg="asia 2 日目: 50 人"
+time=2026-10-31T06:26:43.493Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T06:26:46.494Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T06:26:49.495Z level=INFO msg="asia 3 日目: 120 人"
+time=2026-10-31T06:26:52.501Z level=INFO msg="europe 3 日目: 62 人"
+time=2026-10-31T06:26:55.495Z level=INFO msg="america 3 日目: 55 人"
+time=2026-10-31T06:26:58.496Z level=INFO msg="asia 4 日目: 187 人"
+time=2026-10-31T06:27:01.496Z level=INFO msg="europe 4 日目: 181 人"
+time=2026-10-31T06:27:04.496Z level=INFO msg="america 4 日目: 163 人"
+time=2026-10-31T06:27:07.494Z level=INFO msg="asia 5 日目: 254 人"
+time=2026-10-31T06:27:10.502Z level=INFO msg="europe 5 日目: 523 人"
+time=2026-10-31T06:27:13.627Z level=INFO msg="america 5 日目: 479 人"
+time=2026-10-31T06:27:22.493Z level=INFO msg="europe 最終日（グランプリ）: 522 人"
+time=2026-10-31T06:27:22.496Z level=INFO msg="america 最終日（グランプリ）: 478 人"
+time=2026-10-31T06:27:22.517Z level=INFO msg="asia 最終日（グランプリ）: 253 人"
+time=2026-10-31T06:27:31.489Z level=INFO msg="グランプリ: アジア 198 人, ヨーロッパ 522 人, アメリカ 478 人"
+{
+  "pass": true,
+  "score": 573278,
+  "messages": []
+}
+Oct 31 06:26:22 ip-192-168-4-10 isureal[20471]: 2026/10/31 06:26:22 warmed pack: 590973705 bytes in 96.243227ms
+Oct 31 06:26:23 ip-192-168-1-10 isureal[21211]: 2026/10/31 06:26:23 warmed pack: 590973705 bytes in 916.712692ms
+Oct 31 06:26:22 ip-192-168-2-10 isureal[20112]: 2026/10/31 06:26:22 warmed pack: 590973705 bytes in 79.878868ms
+Oct 31 06:26:22 ip-192-168-3-10 isureal[20155]: 2026/10/31 06:26:22 warmed pack: 590973705 bytes in 81.787085ms

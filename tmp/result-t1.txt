@@ -1,0 +1,55 @@
+Score: 525660
+
+Score Breakdown: base=525660, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T04:05:01.278Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T04:05:04.280Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T04:05:07.278Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T04:05:10.278Z level=INFO msg="asia 2 日目: 54 人"
+time=2026-10-31T04:05:13.280Z level=INFO msg="europe 2 日目: 17 人"
+time=2026-10-31T04:05:14.402Z level=INFO msg="user moved" user=hachimo-5354 from=asia to=europe
+time=2026-10-31T04:05:16.281Z level=INFO msg="america 2 日目: 14 人"
+time=2026-10-31T04:05:19.281Z level=INFO msg="asia 3 日目: 155 人"
+time=2026-10-31T04:05:22.284Z level=INFO msg="europe 3 日目: 48 人"
+time=2026-10-31T04:05:24.946Z level=INFO msg="user moved" user=fure.6150 from=asia to=america
+time=2026-10-31T04:05:25.208Z level=INFO msg="user moved" user=fure.6150 from=america to=europe
+time=2026-10-31T04:05:25.281Z level=INFO msg="america 3 日目: 40 人"
+time=2026-10-31T04:05:25.629Z level=INFO msg="user moved" user=hachimo-5354 from=europe to=asia
+time=2026-10-31T04:05:26.770Z level=INFO msg="user moved" user=kosase6467 from=europe to=america
+time=2026-10-31T04:05:28.289Z level=INFO msg="asia 4 日目: 253 人"
+time=2026-10-31T04:05:29.653Z level=INFO msg="user moved" user=sawasa_6627 from=america to=europe
+time=2026-10-31T04:05:31.292Z level=INFO msg="europe 4 日目: 138 人"
+time=2026-10-31T04:05:32.374Z level=INFO msg="user moved" user=hachimo-5354 from=asia to=europe
+time=2026-10-31T04:05:33.322Z level=INFO msg="user moved" user=fure.6150 from=europe to=america
+time=2026-10-31T04:05:33.381Z level=INFO msg="user moved" user=nenuni7105 from=asia to=europe
+time=2026-10-31T04:05:33.453Z level=INFO msg="user moved" user=moliaka_7491 from=europe to=america
+time=2026-10-31T04:05:33.522Z level=INFO msg="user moved" user=yuan-6971 from=asia to=europe
+time=2026-10-31T04:05:33.729Z level=INFO msg="user moved" user=moliaka_7491 from=america to=europe
+time=2026-10-31T04:05:34.120Z level=INFO msg="user moved" user=sawasa_6627 from=europe to=america
+time=2026-10-31T04:05:34.280Z level=INFO msg="america 4 日目: 120 人"
+time=2026-10-31T04:05:34.280Z level=INFO msg="user moved" user=maxdanfu-7530 from=europe to=asia
+time=2026-10-31T04:05:34.476Z level=INFO msg="user moved" user=fumax7292 from=europe to=asia
+time=2026-10-31T04:05:34.917Z level=INFO msg="user moved" user=marisma7768 from=europe to=america
+time=2026-10-31T04:05:35.414Z level=INFO msg="user moved" user=ansolnoa_7814 from=europe to=asia
+time=2026-10-31T04:05:35.812Z level=INFO msg="user moved" user=kosase6467 from=america to=europe
+time=2026-10-31T04:05:36.104Z level=INFO msg="user moved" user=chiru8022 from=america to=asia
+time=2026-10-31T04:05:36.853Z level=INFO msg="user moved" user=benleoho-8107 from=america to=europe
+time=2026-10-31T04:05:37.296Z level=INFO msg="asia 5 日目: 344 人"
+time=2026-10-31T04:05:40.288Z level=INFO msg="europe 5 日目: 402 人"
+time=2026-10-31T04:05:43.309Z level=INFO msg="america 5 日目: 342 人"
+time=2026-10-31T04:05:52.282Z level=INFO msg="asia 最終日（グランプリ）: 343 人"
+time=2026-10-31T04:05:52.283Z level=INFO msg="europe 最終日（グランプリ）: 401 人"
+time=2026-10-31T04:05:52.285Z level=INFO msg="america 最終日（グランプリ）: 341 人"
+time=2026-10-31T04:06:01.240Z level=INFO msg="グランプリ: アジア 341 人, ヨーロッパ 401 人, アメリカ 341 人"
+{
+  "pass": true,
+  "score": 525660,
+  "messages": []
+}
+
+Re-Enqueue

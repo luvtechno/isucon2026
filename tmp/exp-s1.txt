@@ -1,0 +1,29 @@
+Score: 589550
+Reason: 実行終了
+Stdout
+time=2026-10-31T03:53:41.625Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T03:53:44.628Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T03:53:47.625Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T03:53:50.627Z level=INFO msg="asia 2 日目: 52 人"
+time=2026-10-31T03:53:53.626Z level=INFO msg="europe 2 日目: 22 人"
+time=2026-10-31T03:53:56.628Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T03:53:59.627Z level=INFO msg="asia 3 日目: 154 人"
+time=2026-10-31T03:54:02.626Z level=INFO msg="europe 3 日目: 62 人"
+time=2026-10-31T03:54:05.628Z level=INFO msg="america 3 日目: 53 人"
+time=2026-10-31T03:54:08.628Z level=INFO msg="asia 4 日目: 250 人"
+time=2026-10-31T03:54:11.635Z level=INFO msg="europe 4 日目: 176 人"
+time=2026-10-31T03:54:14.630Z level=INFO msg="america 4 日目: 163 人"
+time=2026-10-31T03:54:17.639Z level=INFO msg="asia 5 日目: 350 人"
+time=2026-10-31T03:54:20.638Z level=INFO msg="europe 5 日目: 511 人"
+time=2026-10-31T03:54:23.634Z level=INFO msg="america 5 日目: 477 人"
+time=2026-10-31T03:54:32.635Z level=INFO msg="europe 最終日（グランプリ）: 510 人"
+time=2026-10-31T03:54:32.648Z level=INFO msg="asia 最終日（グランプリ）: 349 人"
+time=2026-10-31T03:54:32.661Z level=INFO msg="america 最終日（グランプリ）: 476 人"
+time=2026-10-31T03:54:41.636Z level=INFO msg="グランプリ: アジア 343 人, ヨーロッパ 510 人, アメリカ 475 人"
+{
+  "pass": true,
+  "score": 589550,
+  "messages": [
+    "chihoor14202: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}

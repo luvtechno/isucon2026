@@ -1,0 +1,21 @@
+Score: 0
+
+Score Breakdown: base=0, deduction=0
+
+Conclusion
+
+Reason: 初期データの検証に失敗しました
+
+Stdout
+{
+  "pass": false,
+  "score": 0,
+  "messages": [
+    "初期データの検証に失敗しました: 初期データのユーザー panya_shugyo_386: Memories（2026-01）: 画像 URL \"/api/images/8d271b55-87f0-4cdb-8c0a-9184e959c229?exp=1793577600\u0026sig=F3elDienkjzyi3XLIzMM1l3VqiigCl33HXWO4PbsY0g\" の有効期限 2026-11-02T00:00:00Z が範囲外です",
+    "初期データのユーザー yui_kato_1195: Memories（2026-03）: 画像 URL \"/api/images/548488b9-641b-4a69-8dc6-e3f31a18e297?exp=1793577600\u0026sig=ojaG7q_Twk5_J0DH_VAS4sln-m2VI-txvLna5b71DaQ\" の有効期限 2026-11-02T00:00:00Z が範囲外です",
+    "初期データのユーザー powered_by_a_snack_budget_2988: Memories（2025-12）: 画像 URL \"/api/images/a3206748-5eb2-440f-87a3-70dfd60ad3bf?exp=1793577600\u0026sig=_W7Fo2ROF2QC43lEgpI3Ws6vTFrGYBZQ7AiYRVPCQBI\" の有効期限 2026-11-02T00:00:00Z が範囲外です",
+    "初期データのユーザー min_zhang_4: Memories（2026-10）: 画像 URL \"/api/images/3e1cc49d-0e4f-496f-8c3d-037c56886f65?exp=1793577600\u0026sig=EK_QuH6aixqlQyNb75rD7oyXjJMdou82sXNqdFAJ31I\" の有効期限 2026-11-02T00:00:00Z が範囲外です"
+  ]
+}
+
+Re-Enqueue

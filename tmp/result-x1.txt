@@ -1,0 +1,51 @@
+Score: 528951
+
+Score Breakdown: base=528951, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T04:56:07.638Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T04:56:10.640Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T04:56:13.637Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T04:56:16.638Z level=INFO msg="asia 2 日目: 46 人"
+time=2026-10-31T04:56:19.641Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T04:56:22.640Z level=INFO msg="america 2 日目: 16 人"
+time=2026-10-31T04:56:25.640Z level=INFO msg="asia 3 日目: 130 人"
+time=2026-10-31T04:56:27.233Z level=INFO msg="user moved" user=solzoeho-5632 from=asia to=europe
+time=2026-10-31T04:56:28.159Z level=INFO msg="user moved" user=solzoeho-5632 from=europe to=america
+time=2026-10-31T04:56:28.645Z level=INFO msg="europe 3 日目: 57 人"
+time=2026-10-31T04:56:30.569Z level=INFO msg="user moved" user=semia6119 from=europe to=asia
+time=2026-10-31T04:56:31.640Z level=INFO msg="america 3 日目: 47 人"
+time=2026-10-31T04:56:32.114Z level=INFO msg="user moved" user=isne5774 from=asia to=europe
+time=2026-10-31T04:56:34.641Z level=INFO msg="asia 4 日目: 231 人"
+time=2026-10-31T04:56:36.241Z level=INFO msg="user moved" user=motaivy6540 from=america to=europe
+time=2026-10-31T04:56:37.640Z level=INFO msg="europe 4 日目: 169 人"
+time=2026-10-31T04:56:38.683Z level=INFO msg="user moved" user=isne5774 from=europe to=america
+time=2026-10-31T04:56:39.335Z level=INFO msg="user moved" user=motaivy6540 from=europe to=asia
+time=2026-10-31T04:56:39.421Z level=INFO msg="user moved" user=semia6119 from=asia to=america
+time=2026-10-31T04:56:39.610Z level=INFO msg="user moved" user=hohoben_6937 from=asia to=europe
+time=2026-10-31T04:56:39.866Z level=INFO msg="user moved" user=musol.6906 from=asia to=europe
+time=2026-10-31T04:56:40.508Z level=INFO msg="user moved" user=kesuna7212 from=asia to=america
+time=2026-10-31T04:56:40.615Z level=INFO msg="user moved" user=miake_7171 from=asia to=america
+time=2026-10-31T04:56:40.643Z level=INFO msg="america 4 日目: 136 人"
+time=2026-10-31T04:56:40.919Z level=INFO msg="user moved" user=eldan_6230 from=europe to=america
+time=2026-10-31T04:56:43.651Z level=INFO msg="asia 5 日目: 319 人"
+time=2026-10-31T04:56:46.642Z level=INFO msg="europe 5 日目: 498 人"
+time=2026-10-31T04:56:47.234Z level=INFO msg="user moved" user=solzoeho-5632 from=america to=asia
+time=2026-10-31T04:56:49.725Z level=INFO msg="america 5 日目: 386 人"
+time=2026-10-31T04:56:58.642Z level=INFO msg="asia 最終日（グランプリ）: 319 人"
+time=2026-10-31T04:56:58.645Z level=INFO msg="europe 最終日（グランプリ）: 497 人"
+time=2026-10-31T04:56:58.645Z level=INFO msg="america 最終日（グランプリ）: 385 人"
+time=2026-10-31T04:57:07.653Z level=INFO msg="グランプリ: アジア 251 人, ヨーロッパ 497 人, アメリカ 385 人"
+{
+  "pass": true,
+  "score": 528951,
+  "messages": [
+    "kesuna7212: 投稿できるはずの投稿期間で投稿が拒否されました: POST /api/posts: ステータスコード 409 が返りました（期待値 201、post_slot_unavailable）"
+  ]
+}
+
+Re-Enqueue

@@ -1,0 +1,82 @@
+Score: 503619
+
+Score Breakdown: base=503619, deduction=0
+
+Conclusion
+
+Reason: 実行終了
+
+Stdout
+time=2026-10-31T02:25:43.121Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:25:46.123Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:25:49.124Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:25:52.120Z level=INFO msg="asia 2 日目: 50 人"
+time=2026-10-31T02:25:55.123Z level=INFO msg="europe 2 日目: 19 人"
+time=2026-10-31T02:25:56.144Z level=INFO msg="user moved" user=liara-5369 from=asia to=europe
+time=2026-10-31T02:25:58.123Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T02:26:01.122Z level=INFO msg="asia 3 日目: 145 人"
+time=2026-10-31T02:26:03.525Z level=INFO msg="user moved" user=mora.5795 from=asia to=america
+time=2026-10-31T02:26:04.121Z level=INFO msg="europe 3 日目: 56 人"
+time=2026-10-31T02:26:04.900Z level=INFO msg="user moved" user=mora.5795 from=america to=europe
+time=2026-10-31T02:26:05.014Z level=INFO msg="user moved" user=yoyamo-6127 from=asia to=america
+time=2026-10-31T02:26:05.530Z level=INFO msg="user moved" user=yoyamo-6127 from=america to=asia
+time=2026-10-31T02:26:05.957Z level=INFO msg="user moved" user=liara-5369 from=europe to=asia
+time=2026-10-31T02:26:07.121Z level=INFO msg="america 3 日目: 58 人"
+time=2026-10-31T02:26:08.986Z level=INFO msg="user moved" user=sumareva_6514 from=america to=europe
+time=2026-10-31T02:26:10.125Z level=INFO msg="asia 4 日目: 425 人"
+time=2026-10-31T02:26:11.212Z level=INFO msg="user moved" user=liara-5369 from=asia to=europe
+time=2026-10-31T02:26:11.855Z level=INFO msg="user moved" user=yael-7084 from=asia to=europe
+time=2026-10-31T02:26:12.431Z level=INFO msg="user moved" user=miaor.7522 from=asia to=europe
+time=2026-10-31T02:26:12.539Z level=INFO msg="user moved" user=yoivyleo.7614 from=asia to=america
+time=2026-10-31T02:26:12.555Z level=INFO msg="user moved" user=yoyamo-6127 from=asia to=america
+time=2026-10-31T02:26:12.699Z level=INFO msg="user moved" user=miaor.7522 from=europe to=america
+time=2026-10-31T02:26:12.921Z level=INFO msg="user moved" user=yoivyleo.7614 from=america to=asia
+time=2026-10-31T02:26:12.943Z level=INFO msg="user moved" user=yael-7084 from=europe to=asia
+time=2026-10-31T02:26:13.139Z level=INFO msg="europe 4 日目: 170 人"
+time=2026-10-31T02:26:14.182Z level=INFO msg="user moved" user=sumareva_6514 from=europe to=asia
+time=2026-10-31T02:26:14.361Z level=INFO msg="user moved" user=noazoe-8373 from=asia to=europe
+time=2026-10-31T02:26:16.123Z level=INFO msg="america 4 日目: 173 人"
+time=2026-10-31T02:26:16.214Z level=INFO msg="user moved" user=mora.5795 from=europe to=america
+time=2026-10-31T02:26:16.521Z level=INFO msg="user moved" user=nekaan9087 from=europe to=america
+time=2026-10-31T02:26:18.669Z level=INFO msg="user moved" user=ivytsuni.9620 from=europe to=america
+time=2026-10-31T02:26:18.813Z level=INFO msg="user moved" user=rosaro_9719 from=america to=asia
+time=2026-10-31T02:26:19.029Z level=INFO msg="user moved" user=solri.9847 from=america to=europe
+time=2026-10-31T02:26:19.124Z level=INFO msg="asia 5 日目: 1249 人"
+time=2026-10-31T02:26:19.630Z level=INFO msg="user moved" user=suul.9946 from=america to=europe
+time=2026-10-31T02:26:19.711Z level=INFO msg="user moved" user=chiku-9876 from=america to=europe
+time=2026-10-31T02:26:21.859Z level=INFO msg="user moved" user=solelyo10147 from=america to=asia
+time=2026-10-31T02:26:22.005Z level=INFO msg="user moved" user=samiaha.11207 from=america to=asia
+time=2026-10-31T02:26:22.546Z level=INFO msg="europe 5 日目: 497 人"
+time=2026-10-31T02:26:25.169Z level=INFO msg="america 5 日目: 498 人"
+time=2026-10-31T02:26:34.151Z level=INFO msg="america 最終日（グランプリ）: 497 人"
+time=2026-10-31T02:26:34.170Z level=INFO msg="asia 最終日（グランプリ）: 1250 人"
+time=2026-10-31T02:26:34.170Z level=INFO msg="europe 最終日（グランプリ）: 496 人"
+time=2026-10-31T02:26:43.203Z level=INFO msg="グランプリ: アジア 797 人, ヨーロッパ 357 人, アメリカ 373 人"
+{
+  "pass": true,
+  "score": 503619,
+  "messages": [
+    "tokotoko_capybara_2637: 履歴を読めません: GET /api/memories?month=2026-07: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "manbu_shuitun_162: 履歴を読めません: GET /api/memories?month=2025-10: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "stew_obasan_3799: ログアウトできません: POST /api/auth/logout: ステータスコード 401 が返りました（期待値 204、invalid_session）",
+    "ppangjip_suryeon_4982: 履歴を読めません: GET /api/memories/2026-02-28: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "donabe_iwashi_4872: 履歴を読めません: GET /api/memories/2025-11-22: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "seoyun_kang_2999: 履歴を読めません: GET /api/memories?month=2026-05: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "oyatsu_yosan_1047: 履歴を読めません: GET /api/memories?month=2025-12: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "hitoyasumi_sento_2182: 履歴を読めません: GET /api/memories/2026-05-19: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "aoi_yamamoto_333: 履歴を読めません: GET /api/memories/2026-08-27: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "hina_nakamura_2257: 履歴を読めません: GET /api/memories?month=2026-09: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "chochim_gongbang_831: 履歴を読めません: GET /api/memories?month=2026-05: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "raolu_huojian_3922: 履歴を読めません: GET /api/memories?month=2026-07: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "manbu_shuitun_3537: 履歴を読めません: GET /api/memories/2026-06-20: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "sakura_takahashi_3689: 履歴を読めません: GET /api/memories?month=2026-06: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "panya_shugyo_3679: 履歴を読めません: GET /api/memories?month=2026-02: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "shaguo_shadingyu_966: 履歴を読めません: GET /api/memories?month=2026-03: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "natjam_doumi_2396: 履歴を読めません: GET /api/memories?month=2026-04: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "sanchong_yanjiu_4670: 履歴を読めません: GET /api/memories?month=2026-01: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "misaki_ito_2818: 履歴を読めません: GET /api/memories?month=2026-10: ステータスコード 401 が返りました（期待値 200、invalid_session）",
+    "na_li_1365: 履歴を読めません: GET /api/memories?month=2026-06: ステータスコード 401 が返りました（期待値 200、invalid_session）"
+  ]
+}
+
+Re-Enqueue

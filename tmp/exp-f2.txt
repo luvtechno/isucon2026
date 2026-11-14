@@ -1,0 +1,57 @@
+Score: 546385
+Reason: 実行終了
+Stdout
+time=2026-10-31T02:51:20.207Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T02:51:23.209Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T02:51:26.207Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T02:51:29.214Z level=INFO msg="asia 2 日目: 54 人"
+time=2026-10-31T02:51:32.209Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T02:51:35.207Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T02:51:38.211Z level=INFO msg="asia 3 日目: 154 人"
+time=2026-10-31T02:51:41.214Z level=INFO msg="europe 3 日目: 63 人"
+time=2026-10-31T02:51:44.207Z level=INFO msg="america 3 日目: 64 人"
+time=2026-10-31T02:51:47.209Z level=INFO msg="asia 4 日目: 247 人"
+time=2026-10-31T02:51:50.210Z level=INFO msg="europe 4 日目: 190 人"
+time=2026-10-31T02:51:53.212Z level=INFO msg="america 4 日目: 193 人"
+time=2026-10-31T02:51:56.216Z level=INFO msg="asia 5 日目: 341 人"
+time=2026-10-31T02:51:59.214Z level=INFO msg="europe 5 日目: 568 人"
+time=2026-10-31T02:52:02.371Z level=INFO msg="america 5 日目: 554 人"
+time=2026-10-31T02:52:11.212Z level=INFO msg="europe 最終日（グランプリ）: 567 人"
+time=2026-10-31T02:52:11.236Z level=INFO msg="asia 最終日（グランプリ）: 343 人"
+time=2026-10-31T02:52:11.259Z level=INFO msg="america 最終日（グランプリ）: 553 人"
+time=2026-10-31T02:52:20.237Z level=INFO msg="グランプリ: アジア 274 人, ヨーロッパ 558 人, アメリカ 550 人"
+{
+  "pass": true,
+  "score": 546385,
+  "messages": [
+    "fuya.10669: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "sateha.12877: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "muki_11627: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "mishitor5624: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "benrami_13649: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "zoeleone.5724: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "keuroket_seongjang_2777: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "rusa7129: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "tsunizoe5789: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "satormar10086: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "ivyte_5749: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "tsurito7180: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "taivyki13744: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "zoeanleo8289: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "niliamax10794: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "wamaxru_12396: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "kine-11907: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "nusane_12387: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": readfrom tcp 10.27.42.129:39952-\u003eROUTER_HOST:8080: write tcp 10.27.42.129:39952-\u003e57.180.
+    "shini-12323: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "kayo.10916: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+Oct 31 02:50:06 ip-192-168-1-10 isureal[5093]: {"time":"2026-10-31T02:50:06.566200796Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:44858: read: connection 
+Oct 31 02:50:06 ip-192-168-1-10 isureal[5093]: {"time":"2026-10-31T02:50:06.566648049Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:43884: read: connection 
+Oct 31 02:50:06 ip-192-168-1-10 isureal[5093]: {"time":"2026-10-31T02:50:06.567546528Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:45638: read: connection 
+Oct 31 02:50:06 ip-192-168-1-10 isureal[5093]: {"time":"2026-10-31T02:50:06.575917944Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.1.10:80->192.168.10.10:42278: read: connection 
+Oct 31 02:50:06 ip-192-168-2-10 isureal[3267]: {"time":"2026-10-31T02:50:06.562680481Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:27022: read: connection 
+Oct 31 02:50:06 ip-192-168-2-10 isureal[3267]: {"time":"2026-10-31T02:50:06.564549142Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:33064: read: connection 
+Oct 31 02:50:06 ip-192-168-2-10 isureal[3267]: {"time":"2026-10-31T02:50:06.566519606Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:30012: read: connection 
+Oct 31 02:50:06 ip-192-168-2-10 isureal[3267]: {"time":"2026-10-31T02:50:06.572123467Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.2.10:80->192.168.10.10:30126: read: connection 
+Oct 31 02:50:06 ip-192-168-3-10 isureal[3205]: {"time":"2026-10-31T02:50:06.564248744Z","level":"ERROR","msg":"request failed","error":"read tcp 192.168.3.10:80->192.168.10.10:37518: read: connection 

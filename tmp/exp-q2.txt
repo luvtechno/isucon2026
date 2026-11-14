@@ -1,0 +1,60 @@
+Score: 467518
+Reason: 実行終了
+Stdout
+time=2026-10-31T03:39:05.298Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T03:39:08.298Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T03:39:11.297Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T03:39:14.299Z level=INFO msg="asia 2 日目: 50 人"
+time=2026-10-31T03:39:17.299Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T03:39:20.298Z level=INFO msg="america 2 日目: 20 人"
+time=2026-10-31T03:39:23.299Z level=INFO msg="asia 3 日目: 144 人"
+time=2026-10-31T03:39:26.298Z level=INFO msg="europe 3 日目: 65 人"
+time=2026-10-31T03:39:29.308Z level=INFO msg="america 3 日目: 61 人"
+time=2026-10-31T03:39:32.303Z level=INFO msg="asia 4 日目: 243 人"
+time=2026-10-31T03:39:35.304Z level=INFO msg="europe 4 日目: 192 人"
+time=2026-10-31T03:39:38.322Z level=INFO msg="america 4 日目: 178 人"
+time=2026-10-31T03:39:41.311Z level=INFO msg="asia 5 日目: 332 人"
+time=2026-10-31T03:39:44.347Z level=INFO msg="europe 5 日目: 564 人"
+time=2026-10-31T03:39:47.394Z level=INFO msg="america 5 日目: 524 人"
+time=2026-10-31T03:39:56.305Z level=INFO msg="america 最終日（グランプリ）: 523 人"
+time=2026-10-31T03:39:56.320Z level=INFO msg="asia 最終日（グランプリ）: 334 人"
+time=2026-10-31T03:39:56.330Z level=INFO msg="europe 最終日（グランプリ）: 564 人"
+time=2026-10-31T03:40:05.333Z level=INFO msg="グランプリ: アジア 281 人, ヨーロッパ 559 人, アメリカ 519 人"
+{
+  "pass": true,
+  "score": 467518,
+  "messages": [
+    "mianu6518: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "komaxho-13049: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "mimo.10235: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "heso_5352: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "zoelia_12226: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "liana-6599: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "nikoya_9862: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "shihano-14225: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "hekiru11611: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "hohosu_10760: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF",
+    "remo-7746: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "hechileo_10720: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "hahe5167: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "netortor12015: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "tokumia-5533: ログインし直せません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "iwashi_pilaf_stew_698: ログインできません: POST /api/auth/login: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/login\": EOF",
+    "wakame_con_yuzu_1120: ログアウトできません: POST /api/auth/logout: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/auth/logout\": EOF",
+    "shimia-12330: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "same_14316: 通知を購読できません: GET /api/notifications: ステータスコード 503 が返りました（期待値 200、unknown）",
+    "tormi.14519: 投稿できません: POST /api/posts: 通信に失敗しました: Post \"http://ROUTER_HOST:8080/api/posts\": EOF"
+  ]
+}
+Oct 31 03:40:05 ip-192-168-1-10 isureal[8470]: {"time":"2026-10-31T03:40:05.191757528Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-1-10 isureal[8470]: {"time":"2026-10-31T03:40:05.19245723Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-1-10 isureal[8470]: {"time":"2026-10-31T03:40:05.232267085Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-1-10 isureal[8470]: {"time":"2026-10-31T03:40:05.233257083Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-2-10 isureal[12103]: {"time":"2026-10-31T03:40:05.0146388Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-2-10 isureal[12103]: {"time":"2026-10-31T03:40:05.046666365Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-2-10 isureal[12103]: {"time":"2026-10-31T03:40:05.150402237Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-2-10 isureal[12103]: {"time":"2026-10-31T03:40:05.186169534Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-3-10 isureal[12013]: {"time":"2026-10-31T03:40:05.009215183Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-3-10 isureal[12013]: {"time":"2026-10-31T03:40:05.05506664Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-3-10 isureal[12013]: {"time":"2026-10-31T03:40:05.092749142Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}
+Oct 31 03:40:05 ip-192-168-3-10 isureal[12013]: {"time":"2026-10-31T03:40:05.175945298Z","level":"ERROR","msg":"request failed","error":"export_unavailable"}

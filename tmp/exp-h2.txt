@@ -1,0 +1,52 @@
+Score: 549566
+Reason: 実行終了
+Stdout
+time=2026-10-31T05:35:19.535Z level=INFO msg="asia 1 日目: 18 人"
+time=2026-10-31T05:35:22.536Z level=INFO msg="europe 1 日目: 7 人"
+time=2026-10-31T05:35:25.535Z level=INFO msg="america 1 日目: 6 人"
+time=2026-10-31T05:35:28.536Z level=INFO msg="asia 2 日目: 46 人"
+time=2026-10-31T05:35:31.536Z level=INFO msg="europe 2 日目: 21 人"
+time=2026-10-31T05:35:34.537Z level=INFO msg="america 2 日目: 18 人"
+time=2026-10-31T05:35:37.538Z level=INFO msg="asia 3 日目: 130 人"
+time=2026-10-31T05:35:40.540Z level=INFO msg="europe 3 日目: 64 人"
+time=2026-10-31T05:35:43.535Z level=INFO msg="america 3 日目: 57 人"
+time=2026-10-31T05:35:46.536Z level=INFO msg="asia 4 日目: 237 人"
+time=2026-10-31T05:35:49.536Z level=INFO msg="europe 4 日目: 186 人"
+time=2026-10-31T05:35:52.540Z level=INFO msg="america 4 日目: 172 人"
+time=2026-10-31T05:35:55.536Z level=INFO msg="asia 5 日目: 332 人"
+time=2026-10-31T05:35:58.536Z level=INFO msg="europe 5 日目: 539 人"
+time=2026-10-31T05:36:01.566Z level=INFO msg="america 5 日目: 492 人"
+time=2026-10-31T05:36:10.540Z level=INFO msg="europe 最終日（グランプリ）: 538 人"
+time=2026-10-31T05:36:10.541Z level=INFO msg="america 最終日（グランプリ）: 491 人"
+time=2026-10-31T05:36:10.542Z level=INFO msg="asia 最終日（グランプリ）: 331 人"
+time=2026-10-31T05:36:19.493Z level=INFO msg="グランプリ: アジア 274 人, ヨーロッパ 538 人, アメリカ 491 人"
+{
+  "pass": true,
+  "score": 549566,
+  "messages": [
+    "ichiro_suzuki_4423: 履歴を読めません: GET /api/images/d79daec9-ffd7-4f1e-8d68-eed6d5bd1f4f?exp=1793498400\u0026sig=lxskoVcECsrIgCaJX-gVdYUyaYgHPneVgKLhfcgcQiA: ステータスコード 500 が返りました（期待値 200、image_unavailab
+    "himawari_sushi_617: 履歴を読めません: GET /api/images/bb111f27-4779-484b-b94a-a0bb980ad9ac?exp=1793498400\u0026sig=dRW3FMg-tMeLKjn3YA1VuNd3sSMqKywrZyB29CU7I4E: ステータスコード 500 が返りました（期待値 200、image_unavailab
+    "na_li_3048: 履歴を読めません: GET /api/images/4d774990-ac85-4fec-9ff0-9fbc0fa77e0b?exp=1793428539\u0026sig=MKKUOvuViB42rK-mY3yUsaK9M_uySqs2R2Fcyo8u_N0: ステータスコード 500 が返りました（期待値 200、image_unavailable）",
+    "sardines_en_cocotte_de_terre_2092: 履歴を読めません: GET /api/images/d29d43d8-abf5-4e47-9fde-7113d425bca0?exp=1793498400\u0026sig=lCfro-iOVOSCcAGuxD_rKI__Rhqd0igSpv63rHZlnNk: ステータスコード 500 が返りました（期待値 200、
+    "sardinhas_na_panela_de_barro_4757: 履歴を読めません: GET /api/images/ee5b207d-9dc7-4643-ada9-d50898321a24?exp=1793498400\u0026sig=AMUiwlXlhO2GwG0aUyrRwinM1xlrN56qHY0qsV4kRAY: ステータスコード 500 が返りました（期待値 200、
+    "jade_richard_319: 履歴を読めません: GET /api/images/bae8d835-4c00-4c22-809c-1c63b61bdc82?exp=1793498400\u0026sig=eV1-8H0yT_uyT1piUCA646paMkSHUbz_-zKlu7xTB0o: ステータスコード 500 が返りました（期待値 200、image_unavailable
+    "club_de_recherche_triple_4141: 履歴を読めません: GET /api/images/615167ee-8bba-4e08-9207-255fa6587e02?exp=1793498400\u0026sig=uf7OgZ9fry5ACAqpj6L8LlAdzAocexeCtc9MAGDTpO4: ステータスコード 500 が返りました（期待値 200、imag
+    "lukas_muller_4048: 履歴を読めません: GET /api/images/e54f740b-6fe6-479a-92da-548bd0624167?exp=1793498400\u0026sig=3tlem5FmbbsSiLr5cg7VdlJZoAmvTub8gfraDG8PB_s: ステータスコード 500 が返りました（期待値 200、image_unavailabl
+    "dreifach_forschungsclub_709: 履歴を読めません: GET /api/images/e90d2b20-8c99-4815-a530-07a04e82daf9?exp=1793498400\u0026sig=kdgQQrUYMX7Hgd0mP7k4Vp4y6_V3d21vh3Rz0hXdk-k: ステータスコード 500 が返りました（期待値 200、image_
+    "sardinhas_na_panela_de_barro_4757: 履歴を読めません: GET /api/images/cbc62570-ded0-4bc7-be3c-c983a0b4cac5?exp=1793498400\u0026sig=XEf8ZGwcx_QlxvjlDUCXJynTSM2h5HyV5Y8SUS1ec0k: ステータスコード 500 が返りました（期待値 200、
+    "capybaras_en_promenade_4662: 履歴を読めません: GET /api/images/2d1837d5-503a-46d0-b532-38f6d4d7c071?exp=1793428539\u0026sig=AXvQufi3w-ejWNgJjqN91notW9qje8OIBnIlcTCbudk: ステータスコード 500 が返りました（期待値 200、image_
+    "hugo_leroy_4540: 履歴を読めません: GET /api/images/d1cb0738-1151-4130-865b-659fe0a6bd17?exp=1793498400\u0026sig=h8xZHySC3hm0o1QmNhGeqMMft7jiLfAwXPc4oYCrbjE: ステータスコード 500 が返りました（期待値 200、image_unavailable）
+    "mia_jackson_423: 履歴を読めません: GET /api/images/9a13cd44-5912-4c73-b2bd-0abd1813bf34?exp=1793498400\u0026sig=AHjH_r_nJlUkajLMDyExl2ZA4qd9TlWavizIjgEslL8: ステータスコード 500 が返りました（期待値 200、image_unavailable）
+    "elias_hoffmann_8: 履歴を読めません: GET /api/images/118dc72d-e612-4ecf-99d5-33b9606ef525?exp=1793498400\u0026sig=gjJYeKP_YuWAiAV0CQrR1BDPBwMpQg2WdnXYImt1tHo: ステータスコード 500 が返りました（期待値 200、image_unavailable
+    "jade_richard_4127: 履歴を読めません: GET /api/images/4c1271bc-44f0-46d7-a55b-1ded85e3c5b0?exp=1793498400\u0026sig=YvCXnvo_sBEDP_zhjlFPVXOMZ4WOWjpUEcBswtAvqa8: ステータスコード 500 が返りました（期待値 200、image_unavailabl
+    "harper_harris_2356: 履歴を読めません: GET /api/images/daac82cc-de7a-41a5-9a10-bd255584e9b7?exp=1793498400\u0026sig=y1OvigzKCUIp9L8ebXqMmE5juHmchPvvMiM5OgJWHyY: ステータスコード 500 が返りました（期待値 200、image_unavailab
+    "manuela_almeida_2494: 履歴を読めません: GET /api/images/9b9fa61e-720b-4223-a3ac-a37cd0d963fc?exp=1793498400\u0026sig=2ViG5ugQITBRUPY1cu2wxVD4svcK0qjQ6nrsbcdwck8: ステータスコード 500 が返りました（期待値 200、image_unavail
+    "charcoal_mini_turkey_2371: 履歴を読めません: GET /api/images/0cc25d73-d236-413f-92f2-50beafd4f2cc?exp=1793498400\u0026sig=5D8NRYn06oKEWLSH1l_fX3_2PPQDFTLxYWe_lLQ-ke8: ステータスコード 500 が返りました（期待値 200、image_un
+    "jade_richard_319: 履歴を読めません: GET /api/images/6a7026a0-e53c-4a2c-aa83-e50a8319c576?exp=1793498400\u0026sig=jcEClkLedetiIAkoLhChkBnHml01lTf3JM0pwZ_qtOE: ステータスコード 500 が返りました（期待値 200、image_unavailable
+    "pedro_rodrigues_1439: 履歴を読めません: GET /api/images/7d6e8633-976d-4ed4-9d0f-50982b46837a?exp=1793498400\u0026sig=MK9JdnZJ8t1IxLB1GwlahGkgweMWGh6GPKQdjUzSjF8: ステータスコード 500 が返りました（期待値 200、image_unavail
+  ]
+}
+Oct 31 05:35:11 ip-192-168-4-10 isureal[6834]: 2026/10/31 05:35:11 warmed pack: 590973705 bytes in 80.02226ms
+Oct 31 05:35:11 ip-192-168-1-10 isureal[6764]: 2026/10/31 05:35:11 warmed pack: 590973705 bytes in 74.911703ms
+Oct 31 05:35:11 ip-192-168-2-10 isureal[6709]: 2026/10/31 05:35:11 warmed pack: 590973705 bytes in 80.734397ms
+Oct 31 05:35:11 ip-192-168-3-10 isureal[6668]: 2026/10/31 05:35:11 warmed pack: 590973705 bytes in 81.275786ms
