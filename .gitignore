@@ -1,0 +1,10 @@
+# 当日の workspace にあったが、このリポジトリには含めないもの
+/.ssh/
+/tmp/logs/
+/tmp/bench-*.txt
+
+# ビルドの生成物
+/webapp/go/isureal
+/webapp/go/packbuild
+/webapp/go/sigbuild
+/hosts/guard/guard
