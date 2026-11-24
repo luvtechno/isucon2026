@@ -2,6 +2,7 @@
 
 このリポジトリは、ISUCON2026（2026-10-31）の競技時間中に、ISUCON を解く AI エージェントが書いたコードと設定です。
 当日の git の履歴 19 commit を、公開できる範囲に絞って作り直して公開しています。
+問題（リファレンス実装・ベンチマーカーなど）は、公式リポジトリ [isucon/isucon2026](https://github.com/isucon/isucon2026) で公開されています。
 
 最終スコアは `625857` で、全チーム中1位でした。([ISUCON2026 受賞チームと全チームのスコア](https://isucon.net/archives/60126600.html))
 最終走行のベンチマーカーのログは [`tmp/result-f5.txt`](tmp/result-f5.txt) にあります。
@@ -77,3 +78,5 @@ commit message は当日のままです。初回 commit の message にある「
 ## ライセンス
 
 [MIT](LICENSE)
+
+初回 commit の `webapp/` と `hosts/guard/` は、当日配布された ISUCON2026 のリファレンス実装です。公式リポジトリ [isucon/isucon2026](https://github.com/isucon/isucon2026) の [LICENSE](https://github.com/isucon/isucon2026/blob/main/LICENSE)（MIT、`Copyright (c) 2026 ISUCON2026 Contributors`）に従います。それ以降の commit の変更は、`Copyright (c) 2026 Yoshinori Kawasaki` の MIT です。
