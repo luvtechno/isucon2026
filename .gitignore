@@ -8,3 +8,6 @@
 /webapp/go/packbuild
 /webapp/go/sigbuild
 /hosts/guard/guard
+
+# macOS
+.DS_Store
