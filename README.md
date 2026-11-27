@@ -10,12 +10,13 @@
 
 宣伝：2026-11-26 のイベント「[ISUCON2026 優勝AIエージェント、8時間分の生ログを眺める会](https://herp-inc.connpass.com/event/412593/)」にて、解説をします。
 
-## 記事とポッドキャスト
+## 記事・スライド・ポッドキャスト
 
-エージェントの作り方と当日の経過は、次の記事とポッドキャストで話しています。
+エージェントの作り方と当日の経過は、次の記事やポッドキャスト、スライドで解説しています。
 
 - [ISUCON2026 で優勝しました（当日編）](https://zenn.dev/luvtechno/articles/isucon2026-competition-day)（Zenn）
 - [ISUCON2026 で優勝しました（準備編）](https://zenn.dev/luvtechno/articles/isucon2026-preparation)（Zenn）
+- [ISUCON2026 マルチリージョン構成におけるデータのインメモリ化](https://speakerdeck.com/kawasy/isucon2026-statemachine-replication-for-multi-region-in-memory-data-store-maruchi-rijon-kousei-niokeru-deta-no-in-memorika-e46becf2-a792-4df7-b614-7d36bae5e42e)（Speaker Deck）：ステートマシン・レプリケーションという手法と、エージェントが in-memory 化のために書いたコードの設計
 - [142. ISUCON2026で優勝する方法 w/ kawasy](https://fukabori.fm/episode/142)（fukabori.fm）
 - [#27 緊急！ISUCON2026優勝者に聞く、完全自律AIエージェントの作り方と今後のOSS](https://yaoyorozu-oss.henteko07.com/episode/4b51fca1-644f-4b3d-bcd7-42c44f9cf507)（八百万のOSS）
 - [ISUCON 2026を制した謎のAI使い(?) (kawasy)](https://oss4.fun/episode/107/)（趣味でOSSをやっている者だ）
@@ -34,6 +35,8 @@
 | america1 | america | アプリ（`:80`） |
 
 各ホストのアプリは自分のメモリにデータのコピーを持ち、読み取りはそこから返します。書き込みはすべて asia2 へ送り、asia2 が順番を決めてファイルに記録し、同じ順番でほかのホストへ送ります。アプリは PostgreSQL に接続しません。PostgreSQL を読むのは、初期データから過去データのファイル一式を作る `packbuild` だけです。nginx は途中で経路から外し、競技終了時点では止まっていました。問題に含まれていた `isureal-guard`（攻撃を繰り返す IP を BAN する別プロセス）も、BAN の判定をアプリの中（`webapp/go/guard.go`）へ移し、競技終了時点では止まっていました。各ホストの環境変数は `servers/<ホスト>/home/isucon/env.sh` にあります。
+
+この構成はステートマシン・レプリケーションという手法をベースにしています。設計の解説は、スライド「[ISUCON2026 マルチリージョン構成におけるデータのインメモリ化](https://speakerdeck.com/kawasy/isucon2026-statemachine-replication-for-multi-region-in-memory-data-store-maruchi-rijon-kousei-niokeru-deta-no-in-memorika-e46becf2-a792-4df7-b614-7d36bae5e42e)」にあります。
 
 ## ディレクトリ
 
